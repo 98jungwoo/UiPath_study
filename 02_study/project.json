@@ -1,13 +1,12 @@
 {
   "name": "02_study",
-  "projectId": "0e2cafd9-3cf7-4797-b0e8-63cf1c7f4184",
-  "description": "빈 프로세스",
+  "projectId": "8e01236a-6f9e-429e-8f6d-eeea2b9e6375",
+  "description": "변수 및 자료형",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.0-preview]",
     "UiPath.Mail.Activities": "[1.20.3]",
     "UiPath.System.Activities": "[23.8.1-preview]",
-    "UiPath.Testing.Activities": "[23.8.0-preview]",
     "UiPath.UIAutomation.Activities": "[23.6.2-preview]"
   },
   "webServices": [],
@@ -46,11 +45,11 @@
     "fileInfoCollection": [],
     "modernBehavior": false
   },
-  "expressionLanguage": "CSharp",
+  "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "e9224ec2-12bc-4726-a40e-65dc44ceb1de",
+      "uniqueId": "9051fa22-8fa1-4a6a-bbb5-eee84dead586",
       "input": [],
       "output": []
     }
