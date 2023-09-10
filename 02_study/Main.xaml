@@ -98,13 +98,13 @@
           <av:PointCollection x:Key="ConnectorLocation">200,208.8 200,238.8 201,238.8 201,258</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="변수입력" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <Sequence DisplayName="변수입력" sap:VirtualizedContainerService.HintSize="496,684" sap2010:WorkflowViewState.IdRef="Sequence_7">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Assign sap2010:Annotation.AnnotationText="String(문자열)값을 저장한다." sap:VirtualizedContainerService.HintSize="434,113.2" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign sap2010:Annotation.AnnotationText="String(문자열)값을 저장한다." DisplayName="Assign_varString" sap:VirtualizedContainerService.HintSize="434,113.2" sap2010:WorkflowViewState.IdRef="Assign_2">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[varString]</OutArgument>
           </Assign.To>
@@ -117,7 +117,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Assign>
-        <Assign sap2010:Annotation.AnnotationText="inn(숫자)값을 저장한다." sap:VirtualizedContainerService.HintSize="434,113.2" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign sap2010:Annotation.AnnotationText="inn(숫자)값을 저장한다." DisplayName="Assign_varInt" sap:VirtualizedContainerService.HintSize="434,113.2" sap2010:WorkflowViewState.IdRef="Assign_3">
           <Assign.To>
             <OutArgument x:TypeArguments="x:Int32">[varInt]</OutArgument>
           </Assign.To>
@@ -130,7 +130,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Assign>
-        <Assign sap2010:Annotation.AnnotationText="Boolean ( true or false)값을 저장한다." sap:VirtualizedContainerService.HintSize="434,113.2" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign sap2010:Annotation.AnnotationText="Boolean ( true or false)값을 저장한다." DisplayName="Assign_varBoolean" sap:VirtualizedContainerService.HintSize="434,113.2" sap2010:WorkflowViewState.IdRef="Assign_4">
           <Assign.To>
             <OutArgument x:TypeArguments="x:Boolean">[varBoolean]</OutArgument>
           </Assign.To>
@@ -143,7 +143,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Assign>
-        <Assign sap2010:Annotation.AnnotationText="배열값을 저장한다." sap:VirtualizedContainerService.HintSize="434,113.2" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign sap2010:Annotation.AnnotationText="배열값을 저장한다." DisplayName="Assign_varArray" sap:VirtualizedContainerService.HintSize="434,113.2" sap2010:WorkflowViewState.IdRef="Assign_5">
           <Assign.To>
             <OutArgument x:TypeArguments="s:String[]">[varArray]</OutArgument>
           </Assign.To>
@@ -165,7 +165,7 @@
               <av:Size x:Key="ShapeSize">200,82.8</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="변수출력" sap:VirtualizedContainerService.HintSize="472,1022.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="변수출력" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
