@@ -1,6 +1,6 @@
 {
-  "name": "04_study",
-  "projectId": "dcd420ab-7897-4251-b4f5-ef1453eb0554",
+  "name": "04-2_study",
+  "projectId": "9272927c-8027-45a0-bdd5-c5e5e0b741ed",
   "description": "빈 프로세스",
   "main": "Main.xaml",
   "dependencies": {
@@ -8,7 +8,7 @@
     "UiPath.Mail.Activities": "[1.20.3]",
     "UiPath.System.Activities": "[23.8.1-preview]",
     "UiPath.Testing.Activities": "[23.8.0-preview]",
-    "UiPath.UIAutomation.Activities": "23.6.0-preview"
+    "UiPath.UIAutomation.Activities": "[23.6.2-preview]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -50,7 +50,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "08105d3f-2434-4c3f-98d1-f5e4487bd40d",
+      "uniqueId": "6498d296-51d1-4696-b189-1b8fca9eb5ab",
       "input": [],
       "output": []
     }
