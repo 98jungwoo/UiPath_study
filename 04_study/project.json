@@ -1,14 +1,14 @@
 {
-  "name": "과제_20230911",
-  "projectId": "a52b4a23-9c68-4ac7-b2fe-bafc9538e7ac",
-  "description": "2023.09.11의 과제",
+  "name": "04_study",
+  "projectId": "dcd420ab-7897-4251-b4f5-ef1453eb0554",
+  "description": "빈 프로세스",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.0-preview]",
     "UiPath.Mail.Activities": "[1.20.3]",
     "UiPath.System.Activities": "[23.8.1-preview]",
     "UiPath.Testing.Activities": "[23.8.0-preview]",
-    "UiPath.UIAutomation.Activities": "[23.6.2-preview]"
+    "UiPath.UIAutomation.Activities": "23.6.0-preview"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -50,7 +50,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "10609e35-c5da-4207-9111-426b72922699",
+      "uniqueId": "08105d3f-2434-4c3f-98d1-f5e4487bd40d",
       "input": [],
       "output": []
     }

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="과제03_" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="486,2868.8" sap2010:WorkflowViewState.IdRef="과제03__1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="과제03_" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="880,2806" sap2010:WorkflowViewState.IdRef="과제03__1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -70,7 +70,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="[과제3] &#xA;&#xA;위 과제2의 입력데이터를 활용하여 아래와 같이 화면출력하세요. 주의할 점은 아래 데이터의 양끝에 공백이 없어야 합니다.  &#xA;&#xA;     지원서 접수(9월) &#xA;     직무적합성평가(9월) &#xA;     삼성직무적성검사(10월)&#xA;     면접전형(11월)&#xA;" DisplayName="과제03_subString,trim,indexOf,length" sap:VirtualizedContainerService.HintSize="496,2803.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="[과제3] &#xA;&#xA;위 과제2의 입력데이터를 활용하여 아래와 같이 화면출력하세요. 주의할 점은 아래 데이터의 양끝에 공백이 없어야 합니다.  &#xA;&#xA;     지원서 접수(9월) &#xA;     직무적합성평가(9월) &#xA;     삼성직무적성검사(10월)&#xA;     면접전형(11월)&#xA;" DisplayName="과제03_subString,trim,indexOf,length" sap:VirtualizedContainerService.HintSize="496,2741" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="assignment01_String" />
       <Variable x:TypeArguments="x:String" Name="submission" />
@@ -84,8 +84,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message_assignment03" sap:VirtualizedContainerService.HintSize="434,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;과제03 시작&quot;]" />
-    <Assign sap2010:Annotation.AnnotationText="문자열을  assignment01_String에 담아준다." DisplayName="Assign_assignment03" sap:VirtualizedContainerService.HintSize="434,114.8" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message_assignment03" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;과제03 시작&quot;]" />
+    <Assign sap2010:Annotation.AnnotationText="문자열을  assignment01_String에 담아준다." DisplayName="Assign_assignment03" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[assignment01_String]</OutArgument>
       </Assign.To>
@@ -101,7 +101,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap2010:Annotation.AnnotationText="assignment01_String.SubString&#xA;(&#xA;  assignment01_String.IndexOf(Trim(&quot;지원서 접수(9월)&quot;)), &quot;지원서 접수(9월)&quot;.Length&#xA;)&#xA;&#xA;■ assignment01_String에 해당하는 문자열을 추출한다. &#xA;                          = SubString사용(인덱스번호, 문자열길이)&#xA;&#xA;■ 인덱스번호 추출할 문자열의 공백 제거 &#xA;                          = Trim() 사용&#xA;&#xA;■ 인덱스번호 추출 = IndexOf() 사용&#xA;&#xA;■ 문자열길이 추출 = Length 사용" DisplayName="Assign_assignment03" sap:VirtualizedContainerService.HintSize="434,340.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap2010:Annotation.AnnotationText="assignment01_String.SubString&#xA;(&#xA;  assignment01_String.IndexOf(Trim(&quot;지원서 접수(9월)&quot;)), &quot;지원서 접수(9월)&quot;.Length&#xA;)&#xA;&#xA;■ assignment01_String에 해당하는 문자열을 추출한다. &#xA;                          = SubString사용(인덱스번호, 문자열길이)&#xA;&#xA;■ 인덱스번호 추출할 문자열의 공백 제거 &#xA;                          = Trim() 사용&#xA;&#xA;■ 인덱스 번호 추출 = IndexOf() 사용&#xA;&#xA;■ 문자열 길이 추출 = Length 사용" DisplayName="Assign_assignment03" sap:VirtualizedContainerService.HintSize="434,319" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[submission]</OutArgument>
       </Assign.To>
@@ -114,8 +114,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box_assignment03" sap:VirtualizedContainerService.HintSize="434,86.4" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[submission]" />
-    <Assign sap2010:Annotation.AnnotationText="assignment01_String.SubString&#xA;(&#xA;  assignment01_String.IndexOf(Trim(&quot;지원서 접수(9월)&quot;)), &quot;지원서 접수(9월)&quot;.Length&#xA;)&#xA;&#xA;■ assignment01_String에 해당하는 문자열을 추출한다. &#xA;                          = SubString사용(인덱스번호, 문자열길이)&#xA;&#xA;■ 인덱스번호 추출할 문자열의 공백 제거 &#xA;                          = Trim() 사용&#xA;&#xA;■ 인덱스번호 추출 = IndexOf() 사용&#xA;&#xA;■ 문자열길이 추출 = Length 사용" DisplayName="Assign_assignment03" sap:VirtualizedContainerService.HintSize="434,340.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box_assignment03" sap:VirtualizedContainerService.HintSize="434,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[submission]" />
+    <Assign sap2010:Annotation.AnnotationText="assignment01_String.SubString&#xA;(&#xA;  assignment01_String.IndexOf(Trim(&quot;지원서 접수(9월)&quot;)), &quot;지원서 접수(9월)&quot;.Length&#xA;)&#xA;&#xA;■ assignment01_String에 해당하는 문자열을 추출한다. &#xA;                          = SubString사용(인덱스번호, 문자열길이)&#xA;&#xA;■ 인덱스번호 추출할 문자열의 공백 제거 &#xA;                          = Trim() 사용&#xA;&#xA;■ 인덱스번호 추출 = IndexOf() 사용&#xA;&#xA;■ 문자열길이 추출 = Length 사용" DisplayName="Assign_assignment03" sap:VirtualizedContainerService.HintSize="434,319" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[evaluation]</OutArgument>
       </Assign.To>
