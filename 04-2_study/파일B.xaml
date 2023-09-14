@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>600,847</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1514,877</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>파일B_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -79,7 +79,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="파일B" sap:VirtualizedContainerService.HintSize="496,782" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="파일B" sap:VirtualizedContainerService.HintSize="496,812" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="fileB_concat" />
     </Sequence.Variables>
@@ -89,7 +89,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;파일B 시작&quot;]" />
-    <Assign sap2010:Annotation.AnnotationText="&#xD;&#xA;파일A에서 ‘Blue Prism’을 담은 변수 또는 인수를 가지고 와서 아래와 같이 화면 출력하세요.&#xD;&#xA;&#xD;&#xA;    “Blue Prism도 유명한 RPA 제품입니다.” &#xD;&#xA;" sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap2010:Annotation.AnnotationText="&#xA;파일A에서 ‘Blue Prism’을 담은 변수 또는 인수를 가지고 와서 아래와 같이 화면 출력하세요.&#xA;&#xA;    “Blue Prism도 유명한 RPA 제품입니다.” &#xD;&#xA;&#xD;&#xA;concat사용법 : String.Concat( 붙일 문자열1, 붙일 문자열2 )&#xA;" sap:VirtualizedContainerService.HintSize="434,214" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[fileB_concat]</OutArgument>
       </Assign.To>
