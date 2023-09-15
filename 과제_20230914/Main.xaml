@@ -119,7 +119,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;main 시작&quot;]" />
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" sap2010:Annotation.AnnotationText="오픈 브라우저를 사용해서 네이버를 열어준다.&#xA;&#xA;Open Browser와 Attach Browser 를 함께쓰는 습관을 만들어놔야함&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;출력-&gt; UI브라우저에서 변수 생성(타입은 브라우저)" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="484,394" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[rrrr]" Url="https://www.naver.com/">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" sap2010:Annotation.AnnotationText="오픈 브라우저를 사용해서 네이버를 열어준다.&#xA;&#xA;Open Browser와 Attach Browser 를 함께쓰는 습관을 만들어놔야함&#xA;&#xA;&#xA;출력-&gt; UI브라우저에서 변수 생성(타입은 브라우저)" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="484,394" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[rrrr]" Url="https://www.naver.com/">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -147,7 +147,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="&#xD;&#xA;오픈 브라우저에서 만든 타입이 브라우저인 변수를 &#xD;&#xA;속성 -&gt; 출력-&gt; UI브라우저에 변수넣어주기&#xD;&#xA;" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  NAVER'" sap:VirtualizedContainerService.HintSize="484,932" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="339bd2b6641e8d219890f6c2189db897" Selector="&lt;html app='chrome.exe' title='NAVER' /&gt;" UiBrowser="[rrrr]">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="&#xA;오픈 브라우저에서 만든 타입이 브라우저인 변수를 &#xA;속성 -&gt; 출력-&gt; UI브라우저에 변수넣어주기&#xA;" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  NAVER'" sap:VirtualizedContainerService.HintSize="484,932" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="339bd2b6641e8d219890f6c2189db897" Selector="&lt;html app='chrome.exe' title='NAVER' /&gt;" UiBrowser="[rrrr]">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -222,7 +222,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BrowserScope>
-    <ui:CloseTab Browser="{x:Null}" sap2010:Annotation.AnnotationText="브라우저 변수에있는 tab을 닫아준다.(?)&#xD;&#xA;&#xD;&#xA;브라우저 변수에 있는(?) 컨데이터 안에 있는 네이버창을 닫아준다.&#xA;&#xA;클릭으로 직접 끄는 방법도 있지만 이렇게 해줘도 됨 &#xD;&#xA;(이거 땜에 변수를 생성한건 아님)&#xD;&#xA;&#xD;&#xA;■■■■■질문■■■■■■&#xD;&#xA;오픈브라우저에서 브라우저 변수를 생성해서 어태치 입력 브라우저에 변수를 써줬는데&#xD;&#xA;&#xD;&#xA;브라우저 변수 담아서  왜 사용한다고??? &#xD;&#xA;■■■■■■■■■■■■■" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="484,337" sap2010:WorkflowViewState.IdRef="CloseTab_1">
+    <ui:CloseTab Browser="{x:Null}" sap2010:Annotation.AnnotationText="브라우저 변수에있는 tab을 닫아준다.(?)&#xA;&#xA;브라우저 변수에 있는(?) 컨데이터 안에 있는 네이버창을 닫아준다.&#xA;&#xA;클릭으로 직접 끄는 방법도 있지만 이렇게 해줘도 됨 &#xA;(이거 땜에 변수를 생성한건 아님)&#xA;&#xA;■■■■■질문■■■■■■&#xA;오픈브라우저에서 브라우저 변수를 생성해서 어태치 입력 브라우저에 변수를 써줬는데&#xA;&#xA;브라우저 변수 담아서  왜 사용한다고??? &#xA;■■■■■■■■■■■■■" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="484,337" sap2010:WorkflowViewState.IdRef="CloseTab_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
