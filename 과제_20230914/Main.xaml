@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1524,1893</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1524,2056</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,7 +102,7 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="네이버 날씨 화면에서 기온정보 추출하기&#xD;&#xA;&#xD;&#xA;1.&#xD;&#xA;네이버에서 날씨를 검색해서 나온 화면에서 오늘의 기온을 추출하세요&#xD;&#xA;&#xD;&#xA;2.&#xD;&#xA;액티비티는 가급적 이전 버전으로 사용하세요. 예) Open browser, Attach browser 등 &#xD;&#xA;" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="546,1828" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="네이버 날씨 화면에서 기온정보 추출하기&#xA;&#xA;1.&#xA;네이버에서 날씨를 검색해서 나온 화면에서 오늘의 기온을 추출하세요&#xA;&#xA;2.&#xA;액티비티는 가급적 이전 버전으로 사용하세요. 예) Open browser, Attach browser 등 &#xA;" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="546,1991" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -110,7 +110,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;main 시작&quot;]" />
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="오픈 브라우저를 사용해서 네이버를 열어준다." BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="484,323" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.naver.com/">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="오픈 브라우저를 사용해서 네이버를 열어준다.&#xD;&#xA;&#xD;&#xA;Open Browser와 Attach Browser 를 함께쓰는 습관을 만들어놔야함" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="484,349" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.naver.com/">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -138,13 +138,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  NAVER'" sap:VirtualizedContainerService.HintSize="484,860" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="339bd2b6641e8d219890f6c2189db897" Selector="&lt;html app='chrome.exe' title='NAVER' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  NAVER'" sap:VirtualizedContainerService.HintSize="484,997" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="339bd2b6641e8d219890f6c2189db897" Selector="&lt;html app='chrome.exe' title='NAVER' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="450,713" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="450,850" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -199,6 +199,13 @@
                 <OutArgument x:TypeArguments="x:String">[out_weatherMain]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
+            <ui:CloseTab Browser="{x:Null}" sap2010:Annotation.AnnotationText="네이창을 닫아준다.&#xA;&#xA;클릭으로 직접 끄는 방법도 있지만 이렇게 해줘도 됨 " DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="388,97" sap2010:WorkflowViewState.IdRef="CloseTab_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CloseTab>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WorkInNotepad.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WorkInNotepad.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_weatherMain">[out_weatherMain]</InArgument>

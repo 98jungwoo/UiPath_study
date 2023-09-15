@@ -1,7 +1,7 @@
 {
   "name": "05_study",
   "projectId": "bc50dc3c-1641-469d-ab98-fb37f4a1be2c",
-  "description": "빈 프로세스",
+  "description": "샐랙터사용과 어태치브라우저 등 클래식 모드에 대해서 사용",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.0-preview]",

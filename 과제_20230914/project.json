@@ -1,7 +1,7 @@
 {
-  "name": "과제_20230924",
+  "name": "과제_20230914",
   "projectId": "75cb1da8-6c5c-496d-9896-ba5a62eea02b",
-  "description": "빈 프로세스",
+  "description": "웹에서 추출한 값을 메모장에 작성하여 Uipath에서 출력하는 과제",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.0-preview]",
