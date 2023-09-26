@@ -87,7 +87,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,124</av:Point>
           <av:Size x:Key="ShapeSize">200,52</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,176 280,176 280,196.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,176 300,196.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="[&quot;원하는 서비스를 선택하요&quot;+ Environment.NewLine+&#xA;&quot;이메일서비스:1&quot;+ Environment.NewLine+&#xA;&quot;번역서비스:2&quot;+ Environment.NewLine+&#xA;&quot;회의실 예약서비스:3&quot;+ Environment.NewLine]" Title="원하는 서비스">
@@ -122,11 +122,11 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">244.5,196.5</av:Point>
+              <av:Point x:Key="ShapeLocation">264.5,196.5</av:Point>
               <av:Size x:Key="ShapeSize">71,87</av:Size>
-              <av:PointCollection x:Key="Default">244.5,240 100,240 100,334</av:PointCollection>
-              <av:PointCollection x:Key="0Connector">315.5,240 440,240 440,304</av:PointCollection>
-              <av:PointCollection x:Key="1Connector">280,283.5 280,313.5 240,313.5 240,404</av:PointCollection>
+              <av:PointCollection x:Key="Default">264.5,240 100,240 100,334</av:PointCollection>
+              <av:PointCollection x:Key="0Connector">335.5,240 440,240 440,304</av:PointCollection>
+              <av:PointCollection x:Key="1Connector">300,283.5 300,313.5 240,313.5 240,404</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowStep x:Key="0" x:Name="__ReferenceID2">
