@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Lookup실습" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1363,3494" sap2010:WorkflowViewState.IdRef="Lookup실습_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Lookup실습" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1363,3588" sap2010:WorkflowViewState.IdRef="Lookup실습_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -92,7 +92,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Lookup실습" sap:VirtualizedContainerService.HintSize="572,3429" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Lookup실습" sap:VirtualizedContainerService.HintSize="572,3523" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="sellerExcel" />
       <Variable x:TypeArguments="sd:DataTable" Name="buyerExcel" />
@@ -179,20 +179,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="2. 판매실적 파일에서 참조할 수 있는 컬럼은 ‘CellPhone’입니다. CellPhone을 참조하여 Reg_Date에&#xA;   등록일자를 입력하세요. 만약 CellPhone 컬럼에 해당 핸드폰번호가 없으면 빈칸으로 남겨두세요.&#xA;&#xA;3. 프로젝트 폴더 내에 ‘Data’폴더를 만들고 ‘Result.xlsx’ 이름으로 저장하세요. &#xA;" DataTable="[buyerExcel]" DisplayName="구매자_For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1259" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="2. 판매실적 파일에서 참조할 수 있는 컬럼은 ‘CellPhone’입니다. CellPhone을 참조하여 Reg_Date에&#xA;   등록일자를 입력하세요. 만약 CellPhone 컬럼에 해당 핸드폰번호가 없으면 빈칸으로 남겨두세요.&#xA;&#xA;3. 프로젝트 폴더 내에 ‘Data’폴더를 만들고 ‘Result.xlsx’ 이름으로 저장하세요. &#xA;&#xD;&#xA;&#xD;&#xA;미션&#xD;&#xA;if문을 사용해서 값이 있는건 넘어가고, 값이 없는것만 작성하도록 한다." DataTable="[buyerExcel]" DisplayName="구매자_For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1368" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,956" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1020" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="반복중" />
-            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="buyerExcel파일을 반복해서 조회할거임&#xA;&#xA;■ 데이터 테이블: 내가 참조할 파일(buyerExcel은 빈셀이고, sellerExcel은 값이 다 있기 때문에 참조해서 찾아야하기 때문)&#xA;&#xA;■ 열 이름: 내가 참조할 셀 이름은 &quot;CellPhone&quot;이다.&#xA;&#xA;■ 조회 값: 내가 지정한 &quot;CellPhone&quot;의 row의 내용을 조회한다.&#xA;&#xA;■ 타겟의 열이름 : &quot;CellPhone&quot; 으로 조회해서 &quot;Reg_date&quot;의 값을 가져올거다.&#xA;&#xA;&#xA;출력의 셀 값 : 타엣의 열이름&quot;Reg_date&quot;를 받아온 값들을  result에 담아줄거다.&#xA;" DataTable="[sellerExcel]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="434,574" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="CellPhone" LookupValue="[CurrentRow.Item(&quot;CellPhone&quot;).ToString]" TargetColumnName="Reg_date">
+            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="buyerExcel파일을 반복해서 조회할거임&#xA;&#xD;&#xA;input&#xA;■ Data Table: 내가 참조할 파일(buyerExcel은 빈셀이고, sellerExcel은 값이 다 있기 때문에 참조해서 찾아야하기 때문)&#xA;&#xD;&#xA;Lookup Column&#xA;■ Column name(열 이름: 내가 참조할 셀 이름은 &quot;CellPhone&quot;이다.&#xA;&#xD;&#xA;input&#xA;■ Lookup Value(조회 값): 내가 지정한 &quot;CellPhone&quot;의 row의 내용을 조회한다.&#xA;&#xD;&#xA;Target Column&#xA;■ Column name(타겟의 열이름) : &quot;CellPhone&quot; 으로 조회해서 &quot;Reg_date&quot;의 값을 가져올거다.&#xA;&#xA;Output&#xA;■ Column name(출력의 셀 값) : 타엣의 열이름&quot;Reg_date&quot;를 받아온 값들을  result에 담아줄거다.&#xA;" DataTable="[sellerExcel]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="434,649" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="CellPhone" LookupValue="[CurrentRow.Item(&quot;CellPhone&quot;).ToString]" TargetColumnName="Reg_date">
               <ui:LookupDataTable.CellValue>
                 <OutArgument x:TypeArguments="x:Object">[result]</OutArgument>
               </ui:LookupDataTable.CellValue>
@@ -202,7 +202,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LookupDataTable>
-            <Assign sap2010:Annotation.AnnotationText="reg_date를 한줄씩 조회해서, " sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap2010:Annotation.AnnotationText="reg_date를 한줄씩 조회해서, " sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("Reg_date")]</OutArgument>
               </Assign.To>
@@ -225,14 +225,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:CreateDirectory ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="폴더를 새로 만든다.&#xD;&#xA;&#xD;&#xA;폴더명은 Data 이다. 해당 내용은 folder라는 변수에 담아줄거다." DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="510,152" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Output="[folder]" Path="Data\">
+    <ui:CreateDirectory ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="폴더를 새로 만든다.&#xA;&#xA;폴더명은 Data 이다. 해당 내용은 folder라는 변수에 담아줄거다." DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="510,152" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Output="[folder]" Path="Data\">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CreateDirectory>
-    <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="위에서 폴더를 만들었는데  folder변수의 내용을 찾아보면 ID가 있다.&#xD;&#xA;그러고 경로는 ID를 사용할거기 때문에 경로지정해주는 곳에 &#xD;&#xA;&#xD;&#xA;folder.ID+&quot;Result.xlsx&quot; 이렇게 적어주면&#xD;&#xA;&#xD;&#xA;새로만든폴더에 우리가 저장할 값인 buyerExcel를 " DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="510,556" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="[folder.ID+&quot;Result.xlsx&quot;]">
+    <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="위에서 폴더를 만들었는데  folder변수의 내용을 찾아보면 ID가 있다.&#xA;그러고 경로는 ID를 사용할거기 때문에 경로지정해주는 곳에 &#xA;&#xA;folder.ID+&quot;Result.xlsx&quot; 이렇게 적어주면&#xA;&#xA;새로만든폴더에 우리가 저장할 값인 buyerExcel를 " DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="510,541" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="[folder.ID+&quot;Result.xlsx&quot;]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
