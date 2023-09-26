@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="serviceSelect" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1131,827" sap2010:WorkflowViewState.IdRef="serviceSelect_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="serviceSelect" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1363,827" sap2010:WorkflowViewState.IdRef="serviceSelect_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -76,7 +76,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 280,107.5 280,133.5</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,124</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -85,12 +85,12 @@
     <FlowStep x:Name="__ReferenceID4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">180,133.5</av:Point>
+          <av:Point x:Key="ShapeLocation">200,124</av:Point>
           <av:Size x:Key="ShapeSize">200,52</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">280,185.5 280,196.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,176 280,176 280,196.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="[&quot;원하는 서비스를 선택하요&quot;+ Environment.NewLine+&#xD;&#xA;&quot;이메일서비스:1&quot;+ Environment.NewLine+&#xD;&#xA;&quot;번역서비스:2&quot;+ Environment.NewLine+&#xD;&#xA;&quot;회의실 예약서비스:3&quot;+ Environment.NewLine]" Title="원하는 서비스">
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="[&quot;원하는 서비스를 선택하요&quot;+ Environment.NewLine+&#xA;&quot;이메일서비스:1&quot;+ Environment.NewLine+&#xA;&quot;번역서비스:2&quot;+ Environment.NewLine+&#xA;&quot;회의실 예약서비스:3&quot;+ Environment.NewLine]" Title="원하는 서비스">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:Int32">[strService]</OutArgument>
         </ui:InputDialog.Result>
@@ -101,7 +101,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:InputDialog>
       <FlowStep.Next>
-        <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID3" DisplayName="Flow Switch" sap:VirtualizedContainerService.HintSize="71,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+        <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID3" DisplayName="Flow Switch" Expression="[strService]" sap:VirtualizedContainerService.HintSize="71,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
           <FlowSwitch.Default>
             <FlowStep x:Name="__ReferenceID0">
               <sap:WorkflowViewStateService.ViewState>
@@ -119,9 +119,6 @@
               </ui:MessageBox>
             </FlowStep>
           </FlowSwitch.Default>
-          <FlowSwitch.Expression>
-            <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="strService" />
-          </FlowSwitch.Expression>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
