@@ -1,10 +1,11 @@
 {
-  "name": "과제_20231005",
-  "projectId": "7db42dad-e4d8-4ff4-9922-658d61469d85",
+  "name": "과제_20231006",
+  "projectId": "4ee6972a-d5b2-42fe-a8ce-5c376774cb37",
   "description": "Blank Process",
-  "main": "수동으로 목록별 스크레핑(같이리뷰).xaml",
+  "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.1-preview]",
+    "UiPath.GSuite.Activities": "2.3.4",
     "UiPath.Mail.Activities": "[1.20.3]",
     "UiPath.System.Activities": "[23.10.0-preview]",
     "UiPath.Testing.Activities": "[23.10.0-preview]",
@@ -50,8 +51,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "수동으로 목록별 스크레핑(같이리뷰).xaml",
-      "uniqueId": "0aa123f9-11b9-4135-9c4d-08cca2b46154",
+      "filePath": "Main.xaml",
+      "uniqueId": "b275be75-d7e9-4063-9774-0e2ac99933c4",
       "input": [],
       "output": []
     }
