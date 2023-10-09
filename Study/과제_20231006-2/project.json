@@ -1,11 +1,10 @@
 {
-  "name": "과제_20231006",
-  "projectId": "4ee6972a-d5b2-42fe-a8ce-5c376774cb37",
+  "name": "과제_20231006-2",
+  "projectId": "281f8c67-7341-4e64-b8c5-eb466df5d6b0",
   "description": "Blank Process",
-  "main": "동적폴더.xaml",
+  "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.1-preview]",
-    "UiPath.GSuite.Activities": "2.3.4",
     "UiPath.Mail.Activities": "[1.20.3]",
     "UiPath.System.Activities": "[23.10.0-preview]",
     "UiPath.Testing.Activities": "[23.10.0-preview]",
@@ -51,8 +50,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "동적폴더.xaml",
-      "uniqueId": "1f533525-d3e3-45d0-a036-a1699a31fc2d",
+      "filePath": "Main.xaml",
+      "uniqueId": "a652d4be-6941-4667-8d6d-19aacc3f7f2c",
       "input": [],
       "output": []
     }
