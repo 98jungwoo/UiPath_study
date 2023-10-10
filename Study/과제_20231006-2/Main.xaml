@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="dtCelebrity" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1012,4594.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,10652</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -98,15 +98,18 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1022,4529.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1022,10587" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="연예인 정보 불러오기" sap:VirtualizedContainerService.HintSize="960,4124.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="연예인 정보 불러오기" sap:VirtualizedContainerService.HintSize="960,4343" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:Browser" Name="openBrowser" />
         <Variable x:TypeArguments="x:String" Name="strAgency" />
@@ -117,7 +120,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="&quot;연예인.xlsx&quot;파일에는 비밀번호가 설정되어있기 때문에 &#xA;Password 설정에 &quot;1234&quot;를 입력해준다." DataTable="[dtCelebrity]" DisplayName="Read Range Workbook(엑셀읽어오기)" sap:VirtualizedContainerService.HintSize="898,148" sap2010:WorkflowViewState.IdRef="ReadRange_1" Password="1234" SheetName="Sheet1" WorkbookPath="연예인.xlsx">
+      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="&quot;연예인.xlsx&quot;파일에는 비밀번호가 설정되어있기 때문에 &#xA;Password 설정에 &quot;1234&quot;를 입력해준다." DataTable="[dtCelebrity]" DisplayName="Read Range Workbook(엑셀읽어오기)" sap:VirtualizedContainerService.HintSize="898,145" sap2010:WorkflowViewState.IdRef="ReadRange_1" Password="1234" SheetName="Sheet1" WorkbookPath="연예인.xlsx">
         <ui:ReadRange.Range>
           <InArgument x:TypeArguments="x:String">
             <Literal x:TypeArguments="x:String" Value="" />
@@ -129,52 +132,53 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="생년월일" DataTable="[dtCelebrity]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="898,188.8" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
-      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="소속사" DataTable="[dtCelebrity]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="898,188.8" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
-      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="898,392.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[openBrowser]" Url="https://www.naver.com/">
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="생년월일" DataTable="[dtCelebrity]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="898,186" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="소속사" DataTable="[dtCelebrity]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="898,186" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="898,391" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[openBrowser]" Url="https://www.naver.com/">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,266.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,266" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="388,24.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="388,90.8" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
             </Sequence>
           </ActivityAction>
         </ui:OpenBrowser.Body>
       </ui:OpenBrowser>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  NAVER'" sap:VirtualizedContainerService.HintSize="898,2685.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="ba7d4ce607587c2a37e899eff1b0f70f" Selector="&lt;html app='chrome.exe' title='NAVER' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  NAVER'" sap:VirtualizedContainerService.HintSize="898,2915" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="ba7d4ce607587c2a37e899eff1b0f70f" Selector="&lt;html app='chrome.exe' title='NAVER' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="864,2538.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="864,2768" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="&quot;연예인.xlsx&quot;파일의 내용을 담고 잇는 dtCelebrity의 값을 &#xA;&#xA;for Each Row in Data Table을 통해 하나하나 검색하여 &#xA;&#xA;데이터 추출을 반복하고자 한다." DataTable="[dtCelebrity]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="802,2427.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="&quot;연예인.xlsx&quot;파일의 내용을 담고 잇는 dtCelebrity의 값을 &#xA;&#xA;for Each Row in Data Table을 통해 하나하나 검색하여 &#xA;&#xA;데이터 추출을 반복하고자 한다." DataTable="[dtCelebrity]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="802,2657" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="768,2148" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="768,2384" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,142.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[CurrentRow.Item(&quot;이름&quot;).ToString]" />
-                      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="CurrentRow.Item(&quot;이름&quot;)&#xA;&#xA;CurrentRow에 있는 &quot;이름&quot;열에 있는 Item(행)의 하나 " DisplayName="Type Into 'INPUT  query'" sap:VirtualizedContainerService.HintSize="726,215.6" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[CurrentRow.Item(&quot;이름&quot;).ToString]">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[CurrentRow.Item(&quot;이름&quot;).ToString]" />
+                      <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="726,90" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="CurrentRow.Item(&quot;이름&quot;)&#xA;&#xA;CurrentRow에 있는 &quot;이름&quot;열에 있는 Item(행)의 하나 " DisplayName="Type Into 'INPUT  query'" sap:VirtualizedContainerService.HintSize="726,212" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[CurrentRow.Item(&quot;이름&quot;).ToString]">
                         <ui:TypeInto.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="500f4de9-0fce-4706-abb2-3c1004ebc813" InformativeScreenshot="c371dd367ff64d5786b3c15ce902cf18" Selector="&lt;webctrl id='query' tag='INPUT' name='query' /&gt;">
                             <ui:Target.TimeoutMS>
@@ -191,7 +195,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:TypeInto>
-                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="726,166" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="726,164" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
                         <ui:SendHotkey.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="35ef515c-d39f-41b7-8df4-7e21889f886a">
                             <ui:Target.TimeoutMS>
@@ -208,13 +212,14 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:SendHotkey>
-                      <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,323.2" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+                      <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="726,90" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                      <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,317" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
                         <ui:AnchorBase.Action>
                           <ActivityAction x:TypeArguments="ui:Anchor">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
                             </ActivityAction.Argument>
-                            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DD'" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DD'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="GetValue_1">
                               <ui:GetValue.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd91f4de-51a4-4b08-8417-dd78db461750" InformativeScreenshot="7e8a80a34c945791628b50048b7e9ea9" Selector="&lt;webctrl tag='DD' /&gt;">
                                   <ui:Target.TimeoutMS>
@@ -232,7 +237,7 @@
                           </ActivityAction>
                         </ui:AnchorBase.Action>
                         <ui:AnchorBase.AnchorProvider>
-                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="연예인 이름을 입력하게 되면 &#xA;&#xA;어떤것은 바로 확인되고 어떤것은 스크롤을 내려야 확인되기 때문에 &#xA;&#xA;Anchor를 사용해서 aaname을 '출생'으로 입력해서 찾도록 설정함" DisplayName="Find Element 'DT'" sap:VirtualizedContainerService.HintSize="334,230.4" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="연예인 이름을 입력하게 되면 &#xA;&#xA;어떤것은 바로 확인되고 어떤것은 스크롤을 내려야 확인되기 때문에 &#xA;&#xA;Anchor를 사용해서 aaname을 '출생'으로 입력해서 찾도록 설정함" DisplayName="Find Element 'DT'" sap:VirtualizedContainerService.HintSize="334,224" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                             <ui:WaitUiElementAppear.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5165ba91-2f99-4e45-bb1e-261d88c8c5a7" InformativeScreenshot="c20af583338b46d3f57860c03a0708e3" Selector="&lt;webctrl tag='DT' aaname='출생' /&gt;">
                                 <ui:Target.TimeoutMS>
@@ -251,14 +256,14 @@
                           </ui:WaitUiElementAppear>
                         </ui:AnchorBase.AnchorProvider>
                       </ui:AnchorBase>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,142.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[strBirth.ToString]" />
-                      <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,259.6" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[strBirth.ToString]" />
+                      <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,257" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
                         <ui:AnchorBase.Action>
                           <ActivityAction x:TypeArguments="ui:Anchor">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
                             </ActivityAction.Argument>
-                            <ui:GetValue ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="agency: 소속사&#xA;" DisplayName="Get Text 'DD'" sap:VirtualizedContainerService.HintSize="334,150.8" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                            <ui:GetValue ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="agency: 소속사&#xA;" DisplayName="Get Text 'DD'" sap:VirtualizedContainerService.HintSize="334,149" sap2010:WorkflowViewState.IdRef="GetValue_2">
                               <ui:GetValue.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd91f4de-51a4-4b08-8417-dd78db461750" InformativeScreenshot="6b4b2c7ab51728c39b4cb2f73cac50da" Selector="&lt;webctrl tag='A' /&gt;">
                                   <ui:Target.TimeoutMS>
@@ -281,7 +286,7 @@
                           </ActivityAction>
                         </ui:AnchorBase.Action>
                         <ui:AnchorBase.AnchorProvider>
-                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="&#xA;Anchor를 사용해서 aaname을 '소속사'로 입력해서 찾도록 설정함" DisplayName="Find Element 'DT'" sap:VirtualizedContainerService.HintSize="334,166.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="&#xA;Anchor를 사용해서 aaname을 '소속사'로 입력해서 찾도록 설정함" DisplayName="Find Element 'DT'" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
                             <ui:WaitUiElementAppear.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5165ba91-2f99-4e45-bb1e-261d88c8c5a7" InformativeScreenshot="fc924de1f0f64d65b0d7e2c809eab1e8" Selector="&lt;webctrl tag='DT' aaname='소속사' /&gt;">
                                 <ui:Target.TimeoutMS>
@@ -300,9 +305,9 @@
                           </ui:WaitUiElementAppear>
                         </ui:AnchorBase.AnchorProvider>
                       </ui:AnchorBase>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,142.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[strAgency.ToString]" />
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,142.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;이제 dt에 저장하고, 클로즈텝이랑, 인보크 하기&quot;]" />
-                      <Assign sap:VirtualizedContainerService.HintSize="726,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[strAgency.ToString]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,141" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;이제 dt에 저장하고, 클로즈텝이랑, 인보크 하기&quot;]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="726,81" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("생년월일")]</OutArgument>
                         </Assign.To>
@@ -310,7 +315,7 @@
                           <InArgument x:TypeArguments="x:String">[strBirth]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="726,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign sap:VirtualizedContainerService.HintSize="726,81" sap2010:WorkflowViewState.IdRef="Assign_3">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("소속사")]</OutArgument>
                         </Assign.To>
@@ -331,12 +336,10 @@
           </ActivityAction>
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
-      <ui:CloseTab Browser="[openBrowser]" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="898,24.8" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="dt값을 보내줘야함" DisplayName="DataMaipulation.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="898,144.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="DataMaipulation.xaml">
+      <ui:CloseTab Browser="[openBrowser]" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="898,25" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="dt값을 보내줘야함" DisplayName="DataMaipulation.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="898,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="DataMaipulation.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dtCelebrity">
-            <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtCelebrity" />
-          </InOutArgument>
+          <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dtCelebrity">[dtCelebrity]</InOutArgument>
         </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -345,13 +348,222 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence sap:VirtualizedContainerService.HintSize="960,254" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="연예인 정보 엑셀에 저장하기" sap:VirtualizedContainerService.HintSize="828,6093" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="생년월일 조작하고 돌아옴" sap:VirtualizedContainerService.HintSize="388,142.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Main다시 시작&quot;]" />
+      <ui:LogMessage DisplayName="생년월일 조작하고 돌아옴" sap:VirtualizedContainerService.HintSize="766,141" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Main다시 시작&quot;]" />
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="나이_1" DataTable="[dtCelebrity]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="766,186" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="나이_2" DataTable="[dtCelebrity]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="766,186" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4" />
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="나이_3" DataTable="[dtCelebrity]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="766,186" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5" />
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="연령대" DataTable="[dtCelebrity]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="766,186" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6" />
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtCelebrity]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="766,4897" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="732,4711" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="s:DateTime" Name="nowDate" />
+                <Variable x:TypeArguments="s:DateTime" Name="strBirth2" />
+                <Variable x:TypeArguments="x:Int32" Name="intAge" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap2010:Annotation.AnnotationText="오늘 날짜 계산&#xD;&#xA;" sap:VirtualizedContainerService.HintSize="690,124" sap2010:WorkflowViewState.IdRef="Assign_17">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:DateTime">[nowDate]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:DateTime">[DateTime.Today]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <Assign sap2010:Annotation.AnnotationText="생년월일 DateTime으로 변경&#xD;&#xA;" sap:VirtualizedContainerService.HintSize="690,124" sap2010:WorkflowViewState.IdRef="Assign_18">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:DateTime">[strBirth2]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse(CurrentRow.Item("생년월일").ToString())]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <Assign sap2010:Annotation.AnnotationText="Math.Truncate(DateDiff(DateInterval.Day, strBirth2, nowDate)/365)&#xD;&#xA;&#xD;&#xA;일수로 계산해서 나이 구함&#xD;&#xA;&#xD;&#xA;365일로 나누게 되면 소수점이 발생하기 때문에 소수점을 제거해주는 Math.Truncate() 를 사용함&#xD;&#xA;" sap:VirtualizedContainerService.HintSize="690,199" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("나이_1")]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Double">[Math.Truncate(DateDiff(DateInterval.Day, strBirth2, nowDate)/365)]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="690,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[CurrentRow.Item(&quot;나이_1&quot;)]" />
+              <Assign sap2010:Annotation.AnnotationText="Math.Truncate(DateDiff(DateInterval.Month, strBirth2, nowDate)/12)&#xD;&#xA;&#xD;&#xA;월단위로 계산하여 나이구함&#xD;&#xA;&#xD;&#xA;12월로 나누게 되면 소수점이 발생하기 때문에 소수점을 제거해주는 Math.Truncate() 를 사용함" sap:VirtualizedContainerService.HintSize="690,184" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("나이_2")]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Double">[Math.Truncate(DateDiff(DateInterval.Month, strBirth2, nowDate)/12)]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="690,141" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[CurrentRow.Item(&quot;나이_2&quot;)]" />
+              <Assign sap2010:Annotation.AnnotationText="Math.Truncate(DateDiff(DateInterval.Year, strBirth2, nowDate))&#xD;&#xA;&#xD;&#xA;년도로 계산하여 나이 구함 &#xD;&#xA;" sap:VirtualizedContainerService.HintSize="690,154" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("나이_3")]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Decimal">[Math.Truncate(DateDiff(DateInterval.Year, strBirth2, nowDate))]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="690,141" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[CurrentRow.Item(&quot;나이_3&quot;)]" />
+              <Assign sap2010:Annotation.AnnotationText="년도로 계산한 &quot;나이_3&quot;을 이용해서 조건식을 사용함 &#xD;&#xA;&#xD;&#xA;혹시모를 경우를 대비하여 integer.Parse를 사용하여 저장하였음&#xD;&#xA;" sap:VirtualizedContainerService.HintSize="690,154" sap2010:WorkflowViewState.IdRef="Assign_20">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[intAge]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[Integer.Parse(CurrentRow.Item("나이_3").ToString())]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <If sap2010:Annotation.AnnotationText="if(intAge&lt;20) {&#xD;&#xA;&#xD;&#xA;          CurrentRow.Item(&quot;연령대&quot;) = &quot;10대&quot;&#xD;&#xA;&#xD;&#xA;} else if(intAge&lt;30) {&#xD;&#xA;&#xD;&#xA;          CurrentRow.Item(&quot;연령대&quot;) = &quot;20대&quot;&#xD;&#xA;&#xD;&#xA;} else if(intAge&lt;40) {&#xD;&#xA;&#xD;&#xA;          CurrentRow.Item(&quot;연령대&quot;) = &quot;30대&quot;&#xD;&#xA;&#xD;&#xA;} else {&#xD;&#xA;&#xD;&#xA;          CurrentRow.Item(&quot;연령대&quot;) = &quot;40대 이상&quot;&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;" Condition="[intAge&lt;20]" sap:VirtualizedContainerService.HintSize="690,2564" sap2010:WorkflowViewState.IdRef="If_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="476,351" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_15" Message="[&quot;intAge&lt;20 트루일떄&quot;]" />
+                    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_21">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("연령대")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">["10대"]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="656,1749" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="614,141" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;else(intAge&lt;20 펄스일떄)&quot;]" />
+                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="614,1480" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                      <ui:IfElseIf.ConditionBlocks>
+                        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                          <ui:IfElseIfBlock BlockType="If" Condition="[intAge&lt;30]">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,374" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_11" Message="[&quot;(intAge&lt;30 가 트루면)&quot;]" />
+                                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("연령대")]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Object">["20대"]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[intAge&lt;40]">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,374" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_12" Message="[&quot;20대 아니고intAge&lt;40가 트루면&quot;]" />
+                                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_23">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("연령대")]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Object">["30대"]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="Else">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,374" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_16" Message="[&quot;30대 아닐때&quot;]" />
+                                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("연령대")]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Object">["40대 이상"]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                        </sc:BindingList>
+                      </ui:IfElseIf.ConditionBlocks>
+                    </ui:IfElseIf>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="690,141" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[CurrentRow.Item(&quot;연령대&quot;)]" />
+              <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtCelebrity]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="690,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Result.xlsx" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+      </ui:ForEachRow>
     </Sequence>
   </Sequence>
 </Activity>
