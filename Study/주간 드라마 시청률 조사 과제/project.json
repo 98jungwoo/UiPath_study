@@ -1,7 +1,7 @@
 {
-  "name": "빈프로세스1",
-  "projectId": "c8a4d8be-85ad-49a5-b612-e25819dc84fa",
-  "description": "빈 프로세스",
+  "name": "주간 드라마 시청률 조사 과제",
+  "projectId": "f39a9638-59e6-4c1b-a168-f569add5d24f",
+  "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.1-preview]",
@@ -44,14 +44,14 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true,
+    "modernBehavior": false,
     "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "90787e50-95de-4f50-b23d-991994c8dd16",
+      "uniqueId": "de8a345a-c152-4b6c-a9bc-7b2193650fe8",
       "input": [],
       "output": []
     }
