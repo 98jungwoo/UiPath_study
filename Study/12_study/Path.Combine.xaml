@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Format" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="616,1432" sap2010:WorkflowViewState.IdRef="Format_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Path_Combine" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="616,1354" sap2010:WorkflowViewState.IdRef="Path_Combine_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -26,7 +26,6 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Reflection</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -65,32 +64,38 @@
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Format" sap:VirtualizedContainerService.HintSize="496,1367" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Path_Combine" sap:VirtualizedContainerService.HintSize="496,1289" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="strFormat" />
-      <Variable x:TypeArguments="x:String" Name="today" />
-      <Variable x:TypeArguments="s:DateTime" Name="strToday" />
-      <Variable x:TypeArguments="x:String" Name="strWeather" />
-      <Variable x:TypeArguments="x:String" Name="strMessge" />
+      <Variable x:TypeArguments="x:String" Name="strDesktop" />
+      <Variable x:TypeArguments="x:String" Name="strFileName" />
+      <Variable x:TypeArguments="x:String" Name="strPullPath" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;포멧 형식 실습시작&quot;]" />
-    <Assign sap2010:Annotation.AnnotationText="String.Format(&quot;오늘은 {0:d} 이고 시간은 {0:t} 입니다.&quot;, DateTime.Now)&#xD;&#xA;&#xA;&#xA;오늘은 10/11/2023 이고 시간은 12:18 입니다." sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Path_Combine 실습 시작&quot;]" />
+    <ui:GetEnvironmentFolder sap2010:Annotation.AnnotationText="바탕화면의 경로 가져오기" DisplayName="Get Environment Folder" FolderPath="[strDesktop]" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="GetEnvironmentFolder_1" SpecialFolder="Desktop">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetEnvironmentFolder>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[strDesktop]" />
+    <Assign sap2010:Annotation.AnnotationText="내가 지정할 파일명 가져오기" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[strFormat]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[strFileName]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[String.Format("오늘은 {0:d} 이고 시간은 {0:t} 입니다.", DateTime.Now)]</InArgument>
+        <InArgument x:TypeArguments="x:String">["testFile.xlsx"]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -98,14 +103,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[strFormat.ToString]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;값 가공시작 &quot;]" />
-    <Assign sap2010:Annotation.AnnotationText="&#xD;&#xA;DateTime.Today.ToString(&quot;yyyy년 MM월 dd일&quot;)&#xD;&#xA;" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[strFileName]" />
+    <Assign sap2010:Annotation.AnnotationText="바탕화면 경로 + 내가 지정할 파일명&#xD;&#xA; = 전체경로가 만들어짐&#xD;&#xA;&#xD;&#xA;Path.Combine(strDesktop, strFileName)" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[today]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[strPullPath]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[DateTime.Today.ToString("yyyy년 MM월 dd일")]</InArgument>
+        <InArgument x:TypeArguments="x:String">[Path.Combine(strDesktop, strFileName)]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -113,27 +117,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[strWeather]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">21.5</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Assign sap2010:Annotation.AnnotationText="&#xD;&#xA;String.Format(&quot;{0} 현재 기온은 {1} 도 입니다.&quot;, today, strWeather)&#xD;&#xA;" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="Assign_5">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[strMessge]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[String.Format("{0} 현재 기온은 {1} 도 입니다.", today, strWeather)]</InArgument>
-      </Assign.Value>
+    <WriteLine sap2010:Annotation.AnnotationText="확인 용&#xD;&#xA;" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;경로&quot; + strPullPath]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </Assign>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[strMessge]" />
+    </WriteLine>
   </Sequence>
 </Activity>

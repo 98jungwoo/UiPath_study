@@ -2,7 +2,7 @@
   "name": "12_study",
   "projectId": "c4cc2842-d096-4890-a751-b0f0c34848d1",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "Split.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.1-preview]",
     "UiPath.Mail.Activities": "[1.20.3]",
@@ -50,8 +50,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "05486fe2-08f0-42d8-ad47-4c649f322d70",
+      "filePath": "Split.xaml",
+      "uniqueId": "ea2f3201-4109-4367-a880-cf214a1c3611",
       "input": [],
       "output": []
     }
