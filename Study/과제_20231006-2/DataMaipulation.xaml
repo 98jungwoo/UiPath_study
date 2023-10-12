@@ -1,11 +1,11 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="DataMaipulation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="dtCelebrity" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="io_dtCelebrity" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,3017</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1228,3017</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DataMaipulation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -108,14 +108,14 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,141" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;생년월일 계산(DataMaipulation) 시작&quot;]" />
-    <ui:LogMessage sap2010:Annotation.AnnotationText="데이터 가공전 확인용" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,172" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[dtCelebrity]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="데이터 가공전 확인용" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,172" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[io_dtCelebrity]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtCelebrity]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1702" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[io_dtCelebrity]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1702" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -132,7 +132,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap2010:Annotation.AnnotationText="박지원님, gpt참고하여 작성&#xD;&#xA;&#xD;&#xA;System.Text.RegularExpressions.Regex.Match(input, pattern)&#xD;&#xA;&#xD;&#xA;정규식을 사용하기 위해서 조금 더 간결하고 알아보기 쉽게 해당 &#xD;&#xA;데이터와 정규식을 구분하였음&#xD;&#xA;&#xD;&#xA;input : 내가 정규식을 적용할 data&#xD;&#xA;&#xD;&#xA;pattern : 내가 적용할 정규식&#xD;&#xA;" sap:VirtualizedContainerService.HintSize="434,259" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign sap2010:Annotation.AnnotationText="박지원님, gpt참고하여 작성&#xA;&#xA;System.Text.RegularExpressions.Regex.Match(input, pattern)&#xA;&#xA;정규식을 사용하기 위해서 조금 더 간결하고 알아보기 쉽게 해당 &#xA;데이터와 정규식을 구분하였음&#xA;&#xA;input : 내가 정규식을 적용할 data&#xA;&#xA;pattern : 내가 적용할 정규식&#xA;" sap:VirtualizedContainerService.HintSize="434,259" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[input]</OutArgument>
               </Assign.To>
@@ -145,7 +145,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign sap2010:Annotation.AnnotationText="&#xD;&#xA;System.Text.RegularExpressions.Regex.Match(input, pattern)&#xD;&#xA;&#xD;&#xA;정규식을 사용하기 위해서 조금 더 간결하고 알아보기 쉽게 해당 &#xD;&#xA;데이터와 정규식을 구분하였음&#xD;&#xA;&#xD;&#xA;input : 내가 정규식을 적용할 data&#xD;&#xA;&#xD;&#xA;pattern : 내가 적용할 정규식&#xD;&#xA;" sap:VirtualizedContainerService.HintSize="434,244" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign sap2010:Annotation.AnnotationText="&#xA;System.Text.RegularExpressions.Regex.Match(input, pattern)&#xA;&#xA;정규식을 사용하기 위해서 조금 더 간결하고 알아보기 쉽게 해당 &#xA;데이터와 정규식을 구분하였음&#xA;&#xA;input : 내가 정규식을 적용할 data&#xA;&#xA;pattern : 내가 적용할 정규식&#xA;" sap:VirtualizedContainerService.HintSize="434,244" sap2010:WorkflowViewState.IdRef="Assign_5">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[pattern]</OutArgument>
               </Assign.To>
@@ -158,7 +158,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign sap2010:Annotation.AnnotationText="1999. 08. 21. 미국&#xA;&#xA;이런한 형태를&#xA;&#xA;1999. 08. 21&#xA;&#xA;이렇게 변경하는 작업&#xA;&#xD;&#xA;■ 방법1&#xD;&#xA;CurrentRow.Item(&quot;생년월일&quot;).ToString.Remove(12)&#xD;&#xA;-&gt; 이렇게 사용하니 월이 08이 아닌 8로 나오기 때문에 인덱스가 다르게 되서 원하는 결과값을 가질수 없음&#xD;&#xA;&#xD;&#xA;■ 방법2 &#xD;&#xA;정규식을 사용하는 방법 &quot;\d{4}\.\s\d{1,2}\.\s\d{1,2}&quot;" sap:VirtualizedContainerService.HintSize="434,319" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap2010:Annotation.AnnotationText="1999. 08. 21. 미국&#xA;&#xA;이런한 형태를&#xA;&#xA;1999. 08. 21&#xA;&#xA;이렇게 변경하는 작업&#xA;&#xA;■ 방법1&#xA;CurrentRow.Item(&quot;생년월일&quot;).ToString.Remove(12)&#xA;-&gt; 이렇게 사용하니 월이 08이 아닌 8로 나오기 때문에 인덱스가 다르게 되서 원하는 결과값을 가질수 없음&#xA;&#xA;■ 방법2 &#xA;정규식을 사용하는 방법 &quot;\d{4}\.\s\d{1,2}\.\s\d{1,2}&quot;" sap:VirtualizedContainerService.HintSize="434,319" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("생년월일")]</OutArgument>
               </Assign.To>
@@ -190,7 +190,7 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:CommentOut sap2010:Annotation.AnnotationText="DataMaipulation에서 다시한번 Invoke Workflow File을 사용하게 되면  &#xD;&#xA;&#xD;&#xA;[ERROR]&#xD;&#xA;Compilation failed or was cancelled, &#xD;&#xA;The following workflows are in a least one invocation cycle:&#xD;&#xA;&#xD;&#xA;이런 오류는 무한 루프를 발생할 수 있어서 중단했다는 내용임&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;근데 이 액티브티가 없어도 Main으로 동작됨 &#xD;&#xA;why(내생각)? &#xD;&#xA;main에서호출한것이기 때문에 없어도 DataMaipulation동작이 끝나면 main으로 되돌아감" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,525" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut sap2010:Annotation.AnnotationText="DataMaipulation에서 다시한번 Invoke Workflow File을 사용하게 되면  &#xA;&#xA;[ERROR]&#xA;Compilation failed or was cancelled, &#xA;The following workflows are in a least one invocation cycle:&#xA;&#xA;이런 오류는 무한 루프를 발생할 수 있어서 중단했다는 내용임&#xA;&#xA;&#xA;&#xA;근데 이 액티브티가 없어도 Main으로 동작됨 &#xA;why(내생각)? &#xA;main에서호출한것이기 때문에 없어도 DataMaipulation동작이 끝나면 main으로 되돌아감" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,525" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
@@ -200,7 +200,7 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Main.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Main.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dtCelebrity">[dtCelebrity]</InOutArgument>
+              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dtCelebrity">[io_dtCelebrity]</InOutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
