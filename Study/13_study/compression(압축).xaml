@@ -110,18 +110,14 @@
         <InArgument x:TypeArguments="x:String">["C:\uipath\git\Study\13_study\output\compressresult.zip"]</InArgument>
       </Assign.Value>
     </Assign>
-    <InvokeMethod sap2010:Annotation.AnnotationText="CreateFromDirectory : &#xD;&#xA;지정된 디렉터리에서 파일 및 디렉터리를 포함하는 Zip 보관 파일을 만듭니다.&#xD;&#xA;&#xD;&#xA;오류&#xD;&#xA;Invoke Method: Access to the path '경로' is denied.&#xD;&#xA;&#xD;&#xA;이거 왜 안되는거야 &#xD;&#xA;= 압축 후 저장할 경로에 압축했을때 이름일 설정해주지 않았기 때문임" DisplayName="Invoke Method - 압축하기 동작 중" sap:VirtualizedContainerService.HintSize="486,328" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="CreateFromDirectory" TargetType="sic:ZipFile">
+    <InvokeMethod sap2010:Annotation.AnnotationText="CreateFromDirectory : &#xA;지정된 디렉터리에서 파일 및 디렉터리를 포함하는 Zip 보관 파일을 만듭니다.&#xA;&#xA;오류&#xA;Invoke Method: Access to the path '경로' is denied.&#xA;&#xA;이거 왜 안되는거야 &#xA;= 압축 후 저장할 경로에 압축했을때 이름일 설정해주지 않았기 때문임" DisplayName="Invoke Method - 압축하기 동작 중" sap:VirtualizedContainerService.HintSize="486,328" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="CreateFromDirectory" TargetType="sic:ZipFile">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <InArgument x:TypeArguments="x:String">
-        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strZipPath" />
-      </InArgument>
-      <InArgument x:TypeArguments="x:String">
-        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strZipPathOut" />
-      </InArgument>
+      <InArgument x:TypeArguments="x:String">[strZipPath]</InArgument>
+      <InArgument x:TypeArguments="x:String">[strZipPathOut]</InArgument>
     </InvokeMethod>
     <Assign DisplayName="Assign - 압축파일 경로가져오기" sap:VirtualizedContainerService.HintSize="486,82" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
@@ -139,7 +135,7 @@
         <InArgument x:TypeArguments="x:String">["ExtractZip"]</InArgument>
       </Assign.Value>
     </Assign>
-    <InvokeMethod sap2010:Annotation.AnnotationText="ExtractToDirectory : &#xD;&#xA;지정된 ZIP 보관 파일의 모든 파일을 파일 시스템의 디렉터리에 추출합니다.&#xD;&#xA;&#xD;&#xA;" DisplayName="Invoke Method - 압축풀기 동작하는 액티브티" sap:VirtualizedContainerService.HintSize="486,238" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="ExtractToDirectory" TargetType="sic:ZipFile">
+    <InvokeMethod sap2010:Annotation.AnnotationText="ExtractToDirectory : &#xA;지정된 ZIP 보관 파일의 모든 파일을 파일 시스템의 디렉터리에 추출합니다.&#xA;&#xA;" DisplayName="Invoke Method - 압축풀기 동작하는 액티브티" sap:VirtualizedContainerService.HintSize="486,238" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="ExtractToDirectory" TargetType="sic:ZipFile">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

@@ -1,9 +1,10 @@
 {
-  "name": "12_study",
-  "projectId": "c4cc2842-d096-4890-a751-b0f0c34848d1",
+  "name": "과제_20231013",
+  "projectId": "d162a9c9-dade-484e-ada1-72e8df7ec37c",
   "description": "Blank Process",
-  "main": "Split.xaml",
+  "main": "휴폐업조회목록 수정.xaml",
   "dependencies": {
+    "UiPath.Azure.Activities": "1.5.1",
     "UiPath.Excel.Activities": "[2.22.1-preview]",
     "UiPath.Mail.Activities": "[1.20.3]",
     "UiPath.System.Activities": "[23.10.0-preview]",
@@ -14,7 +15,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.0.0",
-  "projectVersion": "1.0.1",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -50,8 +51,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Split.xaml",
-      "uniqueId": "ea2f3201-4109-4367-a880-cf214a1c3611",
+      "filePath": "휴폐업조회목록 수정.xaml",
+      "uniqueId": "86115955-2940-45c8-8502-0ce799be5167",
       "input": [],
       "output": []
     }
