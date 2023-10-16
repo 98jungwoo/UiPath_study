@@ -1,6 +1,6 @@
 {
-  "name": "과제-TemperatureInformation",
-  "projectId": "35d306bd-172c-4786-9f84-4b64427b2b02",
+  "name": "과제_20231016-3단계인수",
+  "projectId": "92a320d6-a44c-4f39-abef-2c529d85aa50",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.0.0",
-  "projectVersion": "1.0.1",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -51,7 +51,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "b2092ca1-83f7-4d4a-b6f8-c6c95cb9df1a",
+      "uniqueId": "4cba9ee6-0bb1-4cb2-82e7-4ec01e396fef",
       "input": [],
       "output": []
     }

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1080,5012" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1228,5020" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -114,7 +114,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="843,4947" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="843,4955" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtBusinessStatus" />
     </Sequence.Variables>
@@ -123,7 +123,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - 휴폐업조회목록 불러오기" sap:VirtualizedContainerService.HintSize="781,281" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="휴폐업조회목록.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - 휴폐업조회목록 불러오기" sap:VirtualizedContainerService.HintSize="781,321" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="휴폐업조회목록.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -146,19 +146,19 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 국세청 홈택스 - 메인" sap:VirtualizedContainerService.HintSize="781,4515" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="3b6a9729-eab4-4b27-b8f8-d34803c033b2" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 국세청 홈택스 - 메인" sap:VirtualizedContainerService.HintSize="781,4483" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="3b6a9729-eab4-4b27-b8f8-d34803c033b2" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="747,4297" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence sap:VirtualizedContainerService.HintSize="747,4266" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="685,4182" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="685,4151" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <Sequence.Variables>
                 <Variable x:TypeArguments="ui:UiElement" Name="uiMenuButten" />
                 <Variable x:TypeArguments="ui:UiElement" Name="uiBusinessNumber" />
@@ -180,13 +180,13 @@
                   </ui:Target>
                 </ui:WaitUiElementAppear.Target>
               </ui:WaitUiElementAppear>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - 메뉴클릭" sap:VirtualizedContainerService.HintSize="623,139" sap2010:WorkflowViewState.IdRef="NClick_1" InUiElement="[uiMenuButten]" KeyModifiers="None" MouseButton="Left" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - 메뉴클릭" sap:VirtualizedContainerService.HintSize="623,137" sap2010:WorkflowViewState.IdRef="NClick_1" InUiElement="[uiMenuButten]" KeyModifiers="None" MouseButton="Left" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" Guid="89d286a8-274e-48c1-9d24-34be0c2082ae" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="623,145" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;사업자등록번호 조회 시작&quot;]" />
-              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey - 화면 내려서 선택하려고 " sap:VirtualizedContainerService.HintSize="623,138" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SpecialKey="True">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="623,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;사업자등록번호 조회 시작&quot;]" />
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey - 화면 내려서 선택하려고 " sap:VirtualizedContainerService.HintSize="623,137" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SpecialKey="True">
                 <ui:SendHotkey.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f3f75218-fbdd-46e3-bc23-a0496a1e5905">
                     <ui:Target.TimeoutMS>
@@ -198,7 +198,7 @@
                   </ui:Target>
                 </ui:SendHotkey.Target>
               </ui:SendHotkey>
-              <ui:FindText FormattedText="{x:Null}" sap2010:Annotation.AnnotationText="&quot;사업자등록번호로 조회&quot; 만 선택하면 인식을 못함 그래서 주민번호로조회하는 영역까지 큰 영역을 선택한 후 text로 찾기하면 됨" DisplayName="Find Text Position 'A  grpMenuAtag_01_01080...'" sap:VirtualizedContainerService.HintSize="623,216" sap2010:WorkflowViewState.IdRef="FindText_2" Occurrence="1" Text="사업자등록번호로 조회" UiElement="[uiBusinessNumber]">
+              <ui:FindText FormattedText="{x:Null}" sap2010:Annotation.AnnotationText="&quot;사업자등록번호로 조회&quot; 만 선택하면 인식을 못함 그래서 주민번호로조회하는 영역까지 큰 영역을 선택한 후 text로 찾기하면 됨" DisplayName="Find Text Position 'A  grpMenuAtag_01_01080...'" sap:VirtualizedContainerService.HintSize="623,212" sap2010:WorkflowViewState.IdRef="FindText_2" Occurrence="1" Text="사업자등록번호로 조회" UiElement="[uiBusinessNumber]">
                 <ui:FindText.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de6a532f-86a7-491d-908f-667fecd24246" InformativeScreenshot="8ba1f9122ffaa95fee5ff78191584b6e" Selector="&lt;html app='chrome.exe' title='국세청 홈택스 - 전체메뉴 &amp;gt; 기존 홈택스 메뉴 보기' /&gt;&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl id='grpMenuUl_01_0108000000' tag='UL' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -215,15 +215,15 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:FindText>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="623,341" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="623,339" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                 <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,262" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,260" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="처음 Find Text Position이 안되서 Find Element로 사용하였으나 오류를 찾아서 주석처리 해놨음" DisplayName="Find Element - 사업자등록번호 조회버튼" FoundElement="[uiBusinessNumber]" sap:VirtualizedContainerService.HintSize="388,151" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
+                    <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="처음 Find Text Position이 안되서 Find Element로 사용하였으나 오류를 찾아서 주석처리 해놨음" DisplayName="Find Element - 사업자등록번호 조회버튼" FoundElement="[uiBusinessNumber]" sap:VirtualizedContainerService.HintSize="388,149" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
                       <ui:WaitUiElementAppear.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8a31c23c-483f-4efa-bae1-051c42a8d77a" InformativeScreenshot="72a7256e604c5704065c202053ca0898" Selector="&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl id='grpMenuAtag_01_0108010000' tag='A' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -243,18 +243,18 @@
                   </Sequence>
                 </ui:CommentOut.Body>
               </ui:CommentOut>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - 조회버튼 클릭" sap:VirtualizedContainerService.HintSize="623,139" sap2010:WorkflowViewState.IdRef="NClick_2" InUiElement="[uiBusinessNumber]" KeyModifiers="None" MouseButton="Left" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - 조회버튼 클릭" sap:VirtualizedContainerService.HintSize="623,137" sap2010:WorkflowViewState.IdRef="NClick_2" InUiElement="[uiBusinessNumber]" KeyModifiers="None" MouseButton="Left" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" Guid="89d286a8-274e-48c1-9d24-34be0c2082ae" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtBusinessStatus]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="623,2213" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtBusinessStatus]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="623,2195" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="589,2025" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="589,2009" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="strBusinessStatus" />
                       </Sequence.Variables>
@@ -263,45 +263,45 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '사업자등록번호' - 입력" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="547,219" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="3b6a9729-eab4-4b27-b8f8-d34803c033b2" Text="[CurrentRow.Item(&quot;사업자등록번호&quot;).ToString]" Version="V3">
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '사업자등록번호' - 입력" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="547,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="3b6a9729-eab4-4b27-b8f8-d34803c033b2" Text="[CurrentRow.Item(&quot;사업자등록번호&quot;).ToString]" Version="V3">
                         <uix:NTypeInto.Target>
                           <uix:TargetAnchorable BrowserURL="https://teht.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/ab/a/a/UTEABAAA13.xml" CvElementArea="474, 493, 115, 27" CvType="InputBox" DesignTimeRectangle="476, 494, 112, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT bsno'" FullSelectorArgument="&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl id='bsno' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl id='bsno' tag='INPUT' type='text' class='w2input wt100' aaname='사업자등록번호' /&gt;" Guid="9f9f259c-6962-4e71-afc6-8530cc611563" InformativeScreenshot="cd5b88d0ba923aedbce0238068c3eb5f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='국세청 홈택스 - 상담ㆍ불복ㆍ고충ㆍ제보ㆍ기타 &amp;gt; 사업자상태 &amp;gt; 사업자상태 조회(사업자등록번호)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target CvTextArea="359, 498, 93, 15" CvTextArgument="AFg1X5599" CvType="Text" DesignTimeRectangle="361, 501, 91, 12" ElementType="Text" FriendlyName="'사업자등록번호'" FullSelectorArgument="&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl id='textbox954' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl id='textbox954' tag='LABEL' type='' class='w2textbox ' aaname='사업자등록번호' check:innerText='사업자등록번호' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAQCAYAAABwQqNMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEtSURBVFhH7ZZLDsMgDER7J66Zk1XKgVhRVRGS44zHJpDSBYu3wB9mGFVtXznnspjDCn8iDeHvZUuppLSVHdYrsm/tMKI6iN4dre2dNUjPmjXDRyKRmneWNcz2RjvWXT0wb5b/sR4eCl9jmY3qsDrD8iNB2h6WN8bV94RPviSqI+sMa8fS1+h576yRfV+7M3xZr0R2WN/baUF7QzBt7yxBPTYPwz8Wrt+99VzBF55h4i06usZgvpgf2ddob2gf9bjejfDxRe08rVPviRDV8rwhTftuFT4LwhJmhqI7ER05h0Dzo2HeJLE5Eb61cNT9v4AMudOro+usV+uMFp0osTuMH1yE90AkdOch/6yDqPMRzncODJ8xIhTZQ7RofPnVe2wawl+MZoU/kRX+NHL5AADgA2Iemgf0AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
                         </uix:NTypeInto.Target>
                       </uix:NTypeInto>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '조회하기'" sap:VirtualizedContainerService.HintSize="547,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b6a9729-eab4-4b27-b8f8-d34803c033b2" Version="V3">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '조회하기'" sap:VirtualizedContainerService.HintSize="547,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b6a9729-eab4-4b27-b8f8-d34803c033b2" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="https://teht.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/ab/a/a/UTEABAAA13.xml" CvTextArea="697, 457, 45, 13" CvTextArgument="z9|8|7|" CvType="Text" DesignTimeRectangle="692, 454, 59, 22" DesignTimeScaleFactor="0.8999999761581421" ElementType="Button" FriendlyName="'조회하기'" FullSelectorArgument="&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl id='trigger5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl id='trigger5' tag='INPUT' type='button' class='w2trigger ' aaname='조회하기' check:text='조회하기' /&gt;" Guid="6390ba87-f055-4254-8c6c-e989b8511766" InformativeScreenshot="cec6b212bf6fbdc2c1bb92209bdbc392.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='국세청 홈택스 - 상담ㆍ불복ㆍ고충ㆍ제보ㆍ기타 &amp;gt; 사업자상태 &amp;gt; 사업자상태 조회(사업자등록번호)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
                       </uix:NClick>
-                      <uix:NGetText DisplayName="Get Text '사업자등록상태 결과' - 읽어오기" sap:VirtualizedContainerService.HintSize="547,158" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="3b6a9729-eab4-4b27-b8f8-d34803c033b2" TextString="[strBusinessStatus]" Version="V3">
+                      <uix:NGetText DisplayName="Get Text '사업자등록상태 결과' - 읽어오기" sap:VirtualizedContainerService.HintSize="547,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="3b6a9729-eab4-4b27-b8f8-d34803c033b2" TextString="[strBusinessStatus]" Version="V3">
                         <uix:NGetText.Target>
                           <uix:TargetAnchorable BrowserURL="https://teht.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/ab/a/a/UTEABAAA13.xml" CvTextArea="262, 577, 152, 13" CvType="AnyWordGroup" DesignTimeRectangle="264, 579, 152, 11" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FriendlyName="'부가가치세 일반과세자 입니다.'" FullSelectorArgument="&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='부가가치세 일반과세자 입니다.' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='w2grid_span' /&gt;" Guid="60025bcd-a957-4bb8-9949-88233780677b" InformativeScreenshot="0e38807c43c63fbedd49984e579bebcd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='국세청 홈택스 - 상담ㆍ불복ㆍ고충ㆍ제보ㆍ기타 &amp;gt; 사업자상태 &amp;gt; 사업자상태 조회(사업자등록번호)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target CvTextArea="489, 548, 78, 13" CvTextArgument="A9x5=8" CvType="Text" DesignTimeRectangle="490, 550, 77, 11" ElementType="Text" FriendlyName="'사업자등록상태'" FullSelectorArgument="&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='사업자등록상태' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txppIframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='사업자등록상태' type='' tag='SPAN' class='w2grid_span' check:innerText='사업자등록상태' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAPCAYAAACcCyOxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHASURBVFhH7ZVbboMwEEW7J3YFKwGxEBRW0BVYyiaClB1E7beLPTMwHo8dA22kVHycD+zreVw/+Pj+etiTY5wm/gKFJk72Ule26o0yJzG2q0q1GLce7F2dfwVbetPrVU289rOwqu3lRmNKItPOGqcjWnv1c9JEXBtogWY0SgNpvaMZp51aAHqjWlmMrImgWeotNzGXCI1agnHjMicRje8MjWkN4FjR6USty6cQm0j6gt44/eA1G0ykRLmTmDAxSBybeB9rP7c2J+OyMRmP2K2dYbcnXUPcS2dAU27ibbANLs42W3ydCVbcUoQSdzepvAj25W5BuJnhRnRGi7PJRBJP4l2Uifgaid6Mj+eSo/laA834uRqdwzfBNiUHy8mbJyPplK31pk0MYi5zwsSlUf9NC52RMhEAhfBr74iLkG8sfGsNcIRJovB9pIznb6SiqVvbzXU+P4nRo++AJlPN0m6qkJZdo2gtPthhXNo8BzbHnphQmzIFWJ8jHpcbNkOx1Y0kYO2mv3PMAROzaHHRmOjk4XhRXNC+kYnPr3MaPW5w8gKEAUk0E9fxKG7xU4H17jPx3UiZ+Df8UxNfy2niYR72B4D+zjWL1Y+rAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
                         </uix:NGetText.Target>
                       </uix:NGetText>
-                      <ui:IfElseIf sap2010:Annotation.AnnotationText="get text로 추출한 문자열에 &quot;폐업자&quot;가 포함 되어있으면 폐업으로 입력&#xD;&#xA;&#xD;&#xA;그렇지 않으면 &quot;부가가치세 일반과세자 입니다.&quot;이면 사업중으로 입력 &#xD;&#xA;&#xD;&#xA;그렇지 않으면 &quot;국세청에 등록되지 않은 사업자 등록번호 입니다.&quot; 출력" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="547,1028" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                      <ui:IfElseIf sap2010:Annotation.AnnotationText="get text로 추출한 문자열에 &quot;폐업자&quot;가 포함 되어있으면 폐업으로 입력&#xA;&#xA;그렇지 않으면 &quot;부가가치세 일반과세자 입니다.&quot;이면 사업중으로 입력 &#xA;&#xA;그렇지 않으면 &quot;국세청에 등록되지 않은 사업자 등록번호 입니다.&quot; 출력" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="547,1017" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                         <ui:IfElseIf.ConditionBlocks>
                           <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                             <ui:IfElseIfBlock BlockType="If" Condition="[strBusinessStatus.Contains(&quot;폐업자&quot;)]">
                               <ui:IfElseIfBlock.Then>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign DisplayName="Assign - 폐업이면 입력하기" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                  <Assign DisplayName="Assign - 폐업이면 입력하기" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("상태")]</OutArgument>
                                     </Assign.To>
@@ -314,13 +314,13 @@
                             </ui:IfElseIfBlock>
                             <ui:IfElseIfBlock BlockType="ElseIf" Condition="[strBusinessStatus.Contains(&quot;부가가치세 일반과세자 입니다.&quot;)]">
                               <ui:IfElseIfBlock.Then>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign DisplayName="Assign - 사업중 입력하기" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                  <Assign DisplayName="Assign - 사업중 입력하기" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("상태")]</OutArgument>
                                     </Assign.To>
@@ -333,13 +333,13 @@
                             </ui:IfElseIfBlock>
                             <ui:IfElseIfBlock BlockType="Else">
                               <ui:IfElseIfBlock.Then>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,187" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,186" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="" AutoCloseAfter="00:00:00" DisplayName="Message Box - 등록되지 않은 사업자" sap:VirtualizedContainerService.HintSize="388,76" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;국세청에 등록되지 않은 사업자 등록번호 입니다.&quot;]">
+                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="" AutoCloseAfter="00:00:00" DisplayName="Message Box - 등록되지 않은 사업자" sap:VirtualizedContainerService.HintSize="388,75" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;국세청에 등록되지 않은 사업자 등록번호 입니다.&quot;]">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
@@ -357,14 +357,14 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:IfElseIf>
-                      <WriteLine sap2010:Annotation.AnnotationText="" DisplayName="Write Line - 어떤것이 입력되었는지 확인" sap:VirtualizedContainerService.HintSize="547,91" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CurrentRow.Item(&quot;상태&quot;).ToString]">
+                      <WriteLine sap2010:Annotation.AnnotationText="" DisplayName="Write Line - 어떤것이 입력되었는지 확인" sap:VirtualizedContainerService.HintSize="547,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CurrentRow.Item(&quot;상태&quot;).ToString]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </WriteLine>
-                      <Assign DisplayName="Assign - 비고란에 검색결과 화면 출력하기" sap:VirtualizedContainerService.HintSize="547,83" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign DisplayName="Assign - 비고란에 검색결과 화면 출력하기" sap:VirtualizedContainerService.HintSize="547,82" sap2010:WorkflowViewState.IdRef="Assign_4">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("비고")]</OutArgument>
                         </Assign.To>
