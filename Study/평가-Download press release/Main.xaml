@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1127,4846</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1127,4893</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,7 +113,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence - 보도자료 데이터 스크레핑" sap:VirtualizedContainerService.HintSize="780,4781" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="이건 데이터 스크레핑 할때 제목이랑 url을 가져오는 스크래핑이 필요하다.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;그러고 url을 이용하기 " DisplayName="Main Sequence - 보도자료 데이터 스크레핑" sap:VirtualizedContainerService.HintSize="780,4828" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="dateStart" />
       <Variable x:TypeArguments="s:DateTime" Name="dateEnd" />
@@ -125,9 +125,10 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign - 시작날짜 지정" sap:VirtualizedContainerService.HintSize="718,83" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Assign - 시작날짜 지정" sap:VirtualizedContainerService.HintSize="718,82" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="s:DateTime">[dateStart]</OutArgument>
       </Assign.To>
@@ -135,7 +136,7 @@
         <InArgument x:TypeArguments="s:DateTime">[New DateTime(2023,10,06)]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign DisplayName="Assign - 종료날짜 지정" sap:VirtualizedContainerService.HintSize="718,83" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Assign - 종료날짜 지정" sap:VirtualizedContainerService.HintSize="718,82" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="s:DateTime">[dateEnd]</OutArgument>
       </Assign.To>
@@ -143,37 +144,37 @@
         <InArgument x:TypeArguments="s:DateTime">[New DateTime(2023,10,16)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser - 경기도 뉴스포털 열기" sap:VirtualizedContainerService.HintSize="718,393" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[browser]" Url="https://gnews.gg.go.kr/briefing/brief_gongbo.do">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser - 경기도 뉴스포털 열기" sap:VirtualizedContainerService.HintSize="718,391" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[browser]" Url="https://gnews.gg.go.kr/briefing/brief_gongbo.do">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,267" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,266" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window - 경기도 뉴스포털 max" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <Delay DisplayName="Delay - 경기도 뉴스포털 연후 딜레이" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="388,91" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <Delay DisplayName="Delay - 경기도 뉴스포털 연후 딜레이" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe 보도자료'" sap:VirtualizedContainerService.HintSize="718,3837" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="666b66a1eac6b164e4023c1aed29add3" Selector="&lt;html app='chrome.exe' title='보도자료 : 경기도뉴스포털' /&gt;" UiBrowser="[browser]">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe 보도자료'" sap:VirtualizedContainerService.HintSize="718,3817" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="666b66a1eac6b164e4023c1aed29add3" Selector="&lt;html app='chrome.exe' title='보도자료 : 경기도뉴스포털' /&gt;" UiBrowser="[browser]">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do - 날짜 지정 및 데이터 스크레핑" sap:VirtualizedContainerService.HintSize="684,3690" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do - 날짜 지정 및 데이터 스크레핑" sap:VirtualizedContainerService.HintSize="684,3670" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into - 시작날짜 입력" EmptyField="True" sap:VirtualizedContainerService.HintSize="622,156" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="False" Text="[dateStart.ToString(&quot;yyyy-MM-dd&quot;)]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into - 시작날짜 입력" EmptyField="True" sap:VirtualizedContainerService.HintSize="622,155" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="False" Text="[dateStart.ToString(&quot;yyyy-MM-dd&quot;)]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5efc6f4a-628d-4bce-8493-aa1074683b0c" InformativeScreenshot="3d91baea186b368c7c92fefa1842c21b" Selector="&lt;webctrl id='datepicker1' tag='INPUT' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -185,7 +186,7 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into - 종료날짜 입력" EmptyField="True" sap:VirtualizedContainerService.HintSize="622,156" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="False" Text="[dateEnd.ToString(&quot;yyyy-MM-dd&quot;)]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into - 종료날짜 입력" EmptyField="True" sap:VirtualizedContainerService.HintSize="622,155" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="False" Text="[dateEnd.ToString(&quot;yyyy-MM-dd&quot;)]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="28b17ce2-9005-4ec8-b49b-5b528700267d" InformativeScreenshot="e39eb88dbc9818ad7b3c406f9cbeac5a" Selector="&lt;webctrl id='datepicker2' tag='INPUT' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -197,7 +198,7 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="" DisplayName="Type Into - select &quot;전체&quot; 선택" sap:VirtualizedContainerService.HintSize="622,156" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="False" Text="전체">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="" DisplayName="Type Into - select &quot;전체&quot; 선택" sap:VirtualizedContainerService.HintSize="622,155" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="False" Text="전체">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0dec8620-b4d8-41dd-bedb-f07677d52838" InformativeScreenshot="8ed2bca5b7352e13e1514cf1f136032c" Selector="&lt;webctrl id='search' tag='SELECT' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -252,15 +253,15 @@
                 <InArgument x:TypeArguments="x:Int32">1</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="622,2600" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="622,2583" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="588,2463" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="588,2447" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap2010:Annotation.AnnotationText=" 해당 pageUi를 초기화 시켜주고 반복문 마지막에 pageUi를 찾는 작업을 하는데 그곳에서 element를 못찾으면 계속 비워지게되니까 반복문이 빠져나가게 된다." DisplayName="Assign - pageUi 를 초기화하는 작업" sap:VirtualizedContainerService.HintSize="546,142" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <Assign sap2010:Annotation.AnnotationText=" 해당 pageUi를 초기화 시켜주고 반복문 마지막에 pageUi를 찾는 작업을 하는데 그곳에서 element를 못찾으면 계속 비워지게되니까 반복문이 빠져나가게 된다." DisplayName="Assign - pageUi 를 초기화하는 작업" sap:VirtualizedContainerService.HintSize="546,139" sap2010:WorkflowViewState.IdRef="Assign_6">
                     <Assign.To>
                       <OutArgument x:TypeArguments="ui:UiElement">[pageUi]</OutArgument>
                     </Assign.To>
@@ -273,9 +274,9 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <If Condition="[index Mod 10 = 1]" DisplayName="If - index가 1이면 따로 페이지 이동 안함" sap:VirtualizedContainerService.HintSize="546,459" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[index Mod 10 = 1]" DisplayName="If - index가 1이면 따로 페이지 이동 안함" sap:VirtualizedContainerService.HintSize="546,457" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="300,81" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -350,7 +351,7 @@
                       </ui:BrowserScope.Body>
                     </ui:BrowserScope>
                   </Sequence>
-                  <If Condition="[index Mod 10 = 0]" DisplayName="If - index가 10이면 다음 버튼 누르기 " sap:VirtualizedContainerService.HintSize="546,378" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[index Mod 10 = 0]" DisplayName="If - index가 10이면 다음 버튼 누르기 " sap:VirtualizedContainerService.HintSize="546,377" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="376,195" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
@@ -400,24 +401,24 @@
                       <InArgument x:TypeArguments="x:Int32">[index+1]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtScraping]" DisplayName="For Each Row in Data Table - dt에 저장된 값 확인용" sap:VirtualizedContainerService.HintSize="546,367" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtScraping]" DisplayName="For Each Row in Data Table - dt에 저장된 값 확인용" sap:VirtualizedContainerService.HintSize="546,364" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_20">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CurrentRow.Item(&quot;번호&quot;).ToString]" />
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CurrentRow.Item(&quot;번호&quot;).ToString]" />
                         </Sequence>
                       </ActivityAction>
                     </ui:ForEachRow.Body>
                   </ui:ForEachRow>
-                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="페이지가 없다는 것을 인식을 못함 -&gt;&#xA;&#xA;while 문 시작할때 pageui = Nothing을 해줬더니 올바르게 반복문이 종료된다. &#xA;&#xA;못찾았을때 아무것도 없다고 나오니까! &#xA;" ContinueOnError="True" DisplayName="Find Element - 페이지 ui" FoundElement="[pageUi]" sap:VirtualizedContainerService.HintSize="546,231" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="페이지가 없다는 것을 인식을 못함 -&gt;&#xA;&#xA;while 문 시작할때 pageui = Nothing을 해줬더니 올바르게 반복문이 종료된다. &#xA;&#xA;못찾았을때 아무것도 없다고 나오니까! &#xA;" ContinueOnError="True" DisplayName="Find Element - 페이지 ui" FoundElement="[pageUi]" sap:VirtualizedContainerService.HintSize="546,224" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                     <ui:WaitUiElementAppear.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d799325-3380-49c3-b756-5a32ec8aef39" InformativeScreenshot="2ac88452920062eade9c1ac7602148bb" Selector="[string.Format(&quot;&lt;webctrl aaname='{0}' /&gt;&quot;, index)]">
                         <ui:Target.TimeoutMS>
@@ -444,14 +445,10 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DownloadAttachedFiles(페이지넘어가긴함 넘어가서 클릭을 못해) - Copy (1).xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="718,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="DownloadAttachedFiles(페이지넘어가긴함 넘어가서 클릭을 못해) - Copy (1).xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DownloadAttachedFiles(페이지넘어가긴함 넘어가서 클릭을 못해) - Copy (1).xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="718,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="DownloadAttachedFiles(페이지넘어가긴함 넘어가서 클릭을 못해) - Copy (1).xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="ui:Browser" x:Key="in_browser">
-          <VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="browser" />
-        </InArgument>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtScraping">
-          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtScraping" />
-        </InArgument>
+        <InArgument x:TypeArguments="ui:Browser" x:Key="in_browser">[browser]</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtScraping">[dtScraping]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>

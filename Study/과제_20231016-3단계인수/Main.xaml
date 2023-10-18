@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1153,2378</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1498,2507</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -94,7 +94,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main-dataTable 불러오고 딕셔너리로 변경하는 작업" sap:VirtualizedContainerService.HintSize="546,2313" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main-dataTable 불러오고 딕셔너리로 변경하는 작업" sap:VirtualizedContainerService.HintSize="546,2442" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtconfig" />
@@ -160,23 +160,33 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <Assign DisplayName="Assign - &quot;구분&quot; 컬럼 이름 짖기" sap:VirtualizedContainerService.HintSize="484,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap2010:Annotation.AnnotationText="인덱스를 활용한 컬럼 이름 짓기&#xD;&#xA;dtconfig.Columns(0).ColumnName" DisplayName="Assign - &quot;구분&quot; 컬럼 이름 짓기" sap:VirtualizedContainerService.HintSize="484,124" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[dtconfig.Columns(0).ColumnName]</OutArgument>
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">구분</InArgument>
       </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign DisplayName="Assign &quot;내용&quot; 컬럼 이름 짖기" sap:VirtualizedContainerService.HintSize="484,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap2010:Annotation.AnnotationText="인덱스를 활용한 컬럼 이름 짓기&#xD;&#xA;dtconfig.Columns(1).ColumnName" DisplayName="Assign &quot;내용&quot; 컬럼 이름 짓기" sap:VirtualizedContainerService.HintSize="484,124" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[dtconfig.Columns(1).ColumnName]</OutArgument>
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">내용</InArgument>
       </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap2010:Annotation.AnnotationText="dt내용을 dictionary로 변경하는 메서드 : &#xA;&#xA;dtconfig.AsEnumerable.ToDictionary(Of String, Object)(Function (r) r(&quot;구분&quot;).ToString, Function (r) r(&quot;정보&quot;).ToString)&#xA;" DisplayName="Assign-dataTable을 딕셔너리로 변경" sap:VirtualizedContainerService.HintSize="484,169" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap2010:Annotation.AnnotationText="dt내용을 dictionary로 변경하는 메서드 : &#xA;&#xA;dtconfig.AsEnumerable.ToDictionary(Of String, Object)(Function (r) r(&quot;구분&quot;).ToString, Function (r) r(&quot;정보&quot;).ToString)&#xA;&#xD;&#xA;&#xD;&#xA;딕셔너리는 Config라고 한다! &#xD;&#xA;어딜가던 Config = 딕셔너리 공식처럼 생각하기" DisplayName="Assign-dataTable을 딕셔너리로 변경" sap:VirtualizedContainerService.HintSize="484,214" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[Config]</OutArgument>
       </Assign.To>
@@ -192,12 +202,8 @@
     <ui:LogMessage DisplayName="Log Message- 메인에서 세팅 끝" sap:VirtualizedContainerService.HintSize="484,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;main에서 세팅 끝&quot;]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="InputData.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="484,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="InputData.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_Config">
-          <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
-        </InOutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="unicornName">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="unicornName" />
-        </OutArgument>
+        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_Config">[Config]</InOutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="unicornName">[unicornName]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:LogMessage DisplayName="Log Message- getData까지 동작하고 와서 main동작 시작" sap:VirtualizedContainerService.HintSize="484,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;getData에서 돌아와서 유니콘 이름 출력하기&quot;]" />
