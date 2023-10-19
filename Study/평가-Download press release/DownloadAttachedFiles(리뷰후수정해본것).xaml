@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1202,5887.999999999999</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1202,5863</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DownloadAttachedFiles_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -110,7 +110,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="첨부파일목록도 스크레핑 해서 url을 가져와서 hpwx가 있는 url을 선택해서 다운 받는 과정으로 해볼 수 있다. &#xA;&#xA;" DisplayName="DownloadAttachedFiles" sap:VirtualizedContainerService.HintSize="1044,5823" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="첨부파일목록도 스크레핑 해서 url을 가져와서 hpwx가 있는 url을 선택해서 다운 받는 과정으로 해볼 수 있다. &#xA;&#xA;" DisplayName="DownloadAttachedFiles" sap:VirtualizedContainerService.HintSize="1044,5798" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="subject" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtScraping" />
@@ -131,7 +131,7 @@
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <Assign sap:VirtualizedContainerService.HintSize="982,83" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign DisplayName="Assign - 폴더명 오늘날짜로 지정하기 위해 선언" sap:VirtualizedContainerService.HintSize="982,82" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="s:DateTime">[dateToday]</OutArgument>
       </Assign.To>
@@ -139,8 +139,8 @@
         <InArgument x:TypeArguments="s:DateTime">[DateTime.Today]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:GetEnvironmentFolder DisplayName="Get Environment Folder" FolderPath="[desktopPath]" sap:VirtualizedContainerService.HintSize="982,86" sap2010:WorkflowViewState.IdRef="GetEnvironmentFolder_1" SpecialFolder="Desktop" />
-    <Assign sap2010:Annotation.AnnotationText="desktopPath+&quot;\DownloadFiles\&quot;+dateToday.ToString(&quot;yyyyMMdd&quot;)+&quot;\&quot;" sap:VirtualizedContainerService.HintSize="982,127" sap2010:WorkflowViewState.IdRef="Assign_7">
+    <ui:GetEnvironmentFolder DisplayName="Get Environment Folder - 바탕화면 경로 확인하려고" FolderPath="[desktopPath]" sap:VirtualizedContainerService.HintSize="982,85" sap2010:WorkflowViewState.IdRef="GetEnvironmentFolder_1" SpecialFolder="Desktop" />
+    <Assign sap2010:Annotation.AnnotationText="desktopPath+&quot;\DownloadFiles\&quot;+dateToday.ToString(&quot;yyyyMMdd&quot;)+&quot;\&quot;" DisplayName="Assign 바탕화면 경로와 폴더생성 시 필요한 폴더명 조합" sap:VirtualizedContainerService.HintSize="982,124" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[folderPath]</OutArgument>
       </Assign.To>
@@ -153,13 +153,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe 보도자료'" sap:VirtualizedContainerService.HintSize="982,5108" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="ba81d33a608e2b96234d0996c5f35d96" Selector="&lt;html app='chrome.exe' title='보도자료 : 경기도뉴스포털' /&gt;" UiBrowser="[in_browser]">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe 보도자료'" sap:VirtualizedContainerService.HintSize="982,5091" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="ba81d33a608e2b96234d0996c5f35d96" Selector="&lt;html app='chrome.exe' title='보도자료 : 경기도뉴스포털' /&gt;" UiBrowser="[in_browser]">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="948,4961" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="948,4944" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="pageUi" />
               <Variable x:TypeArguments="x:Int32" Name="index" />
@@ -192,7 +192,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <Assign DisplayName="Assign - 페이지ui가 없을때까지 반복하려고 생성" sap:VirtualizedContainerService.HintSize="886,83" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Assign - 페이지ui가 없을때까지 반복하려고 생성" sap:VirtualizedContainerService.HintSize="886,82" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="ui:UiElement">[pageUi]</OutArgument>
               </Assign.To>
@@ -200,7 +200,7 @@
                 <InArgument x:TypeArguments="ui:UiElement">[new UiElement]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Assign - 페이지 +1 하려고 생성함" sap:VirtualizedContainerService.HintSize="886,83" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="Assign - 페이지 +1 하려고 생성함" sap:VirtualizedContainerService.HintSize="886,82" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[index]</OutArgument>
               </Assign.To>
@@ -208,15 +208,15 @@
                 <InArgument x:TypeArguments="x:Int32">1</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[pageUi IsNot Nothing]" DisplayName="While" sap:VirtualizedContainerService.HintSize="886,4457" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[pageUi IsNot Nothing]" DisplayName="While" sap:VirtualizedContainerService.HintSize="886,4442" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="852,4320" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="852,4306" sap2010:WorkflowViewState.IdRef="Sequence_45">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap2010:Annotation.AnnotationText=" 해당 pageUi를 초기화 시켜주고 반복문 마지막에 pageUi를 찾는 작업을 하는데 그곳에서 element를 못찾으면 계속 비워지게되니까 반복문이 빠져나가게 된다." DisplayName="Assign - pageUi 를 초기화하는 작업" sap:VirtualizedContainerService.HintSize="810,143" sap2010:WorkflowViewState.IdRef="Assign_13">
+                  <Assign sap2010:Annotation.AnnotationText=" 해당 pageUi를 초기화 시켜주고 반복문 마지막에 pageUi를 찾는 작업을 하는데 그곳에서 element를 못찾으면 계속 비워지게되니까 반복문이 빠져나가게 된다." DisplayName="Assign - pageUi 를 초기화하는 작업" sap:VirtualizedContainerService.HintSize="810,139" sap2010:WorkflowViewState.IdRef="Assign_13">
                     <Assign.To>
                       <OutArgument x:TypeArguments="ui:UiElement">[pageUi]</OutArgument>
                     </Assign.To>
@@ -229,9 +229,9 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <If Condition="[index Mod 10 = 1]" DisplayName="If - index가 1이면 따로 페이지 이동 안함" sap:VirtualizedContainerService.HintSize="810,459" sap2010:WorkflowViewState.IdRef="If_9">
+                  <If Condition="[index Mod 10 = 1]" DisplayName="If - index가 1이면 따로 페이지 이동 안함" sap:VirtualizedContainerService.HintSize="810,457" sap2010:WorkflowViewState.IdRef="If_9">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="300,81" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                      <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_46">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -271,13 +271,13 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtScraping]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="810,2738" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtScraping]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="810,2730" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="SubjectRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="776,2550" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="776,2544" sap2010:WorkflowViewState.IdRef="Sequence_50">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="sd:DataTable" Name="dtFindFile" />
                             <Variable x:TypeArguments="ui:Browser" Name="findFile" />
@@ -287,7 +287,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="734,83" sap2010:WorkflowViewState.IdRef="Assign_15">
+                          <Assign sap:VirtualizedContainerService.HintSize="734,82" sap2010:WorkflowViewState.IdRef="Assign_15">
                             <Assign.To>
                               <OutArgument x:TypeArguments="sd:DataTable">[dtFindFile]</OutArgument>
                             </Assign.To>
@@ -295,14 +295,14 @@
                               <InArgument x:TypeArguments="sd:DataTable">[New DataTable]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:NavigateTo Browser="[in_browser]" DisplayName="Navigate To - 제목누르기" sap:VirtualizedContainerService.HintSize="734,86" sap2010:WorkflowViewState.IdRef="NavigateTo_4" Url="[SubjectRow.Item(&quot;제목url&quot;).ToString]" />
-                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe 보도자료'" sap:VirtualizedContainerService.HintSize="734,1958" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="f121eb60e54c0b2b038f8fd05730ef8d" Selector="&lt;html app='chrome.exe' title='* : 보도자료 : 경기도뉴스포털' /&gt;" UiBrowser="[findFile]">
+                          <ui:NavigateTo Browser="[in_browser]" DisplayName="Navigate To - 제목누르기" sap:VirtualizedContainerService.HintSize="734,85" sap2010:WorkflowViewState.IdRef="NavigateTo_4" Url="[SubjectRow.Item(&quot;제목url&quot;).ToString]" />
+                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe 보도자료'" sap:VirtualizedContainerService.HintSize="734,1954" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="f121eb60e54c0b2b038f8fd05730ef8d" Selector="&lt;html app='chrome.exe' title='* : 보도자료 : 경기도뉴스포털' /&gt;" UiBrowser="[findFile]">
                             <ui:BrowserScope.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="700,1811" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="700,1807" sap2010:WorkflowViewState.IdRef="Sequence_61">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -317,21 +317,21 @@
                                       </ui:Target>
                                     </ui:ExtractData.Target>
                                   </ui:ExtractData>
-                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFindFile]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="638,1553" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFindFile]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="638,1549" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                                     <ui:ForEachRow.Body>
                                       <ActivityAction x:TypeArguments="sd:DataRow">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,1365" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,1363" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[CurrentRow.Item(&quot;첨부파일&quot;).ToString.Contains(&quot;hwpx&quot;)]" sap:VirtualizedContainerService.HintSize="562,1277" sap2010:WorkflowViewState.IdRef="If_14">
+                                          <If Condition="[CurrentRow.Item(&quot;첨부파일&quot;).ToString.Contains(&quot;hwpx&quot;)]" sap:VirtualizedContainerService.HintSize="562,1275" sap2010:WorkflowViewState.IdRef="If_14">
                                             <If.Then>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="528,1094" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="528,1093" sap2010:WorkflowViewState.IdRef="Sequence_63">
                                                 <Sequence.Variables>
                                                   <Variable x:TypeArguments="x:String" Name="attachment" />
                                                 </Sequence.Variables>
@@ -340,7 +340,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:NavigateTo Browser="[in_browser]" DisplayName="Navigate To - &quot;hwpx&quot;첨부파일찾아가기" sap:VirtualizedContainerService.HintSize="486,86" sap2010:WorkflowViewState.IdRef="NavigateTo_3" Url="[CurrentRow.Item(&quot;첨부파일url&quot;).ToString]" />
+                                                <ui:NavigateTo Browser="[in_browser]" DisplayName="Navigate To - &quot;hwpx&quot;첨부파일찾아가기" sap:VirtualizedContainerService.HintSize="486,85" sap2010:WorkflowViewState.IdRef="NavigateTo_3" Url="[CurrentRow.Item(&quot;첨부파일url&quot;).ToString]" />
                                                 <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,53" sap2010:WorkflowViewState.IdRef="CommentOut_5">
                                                   <ui:CommentOut.Body>
                                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,390" sap2010:WorkflowViewState.IdRef="Sequence_66">
