@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "windy-bounty-402403",
+  "private_key_id": "2f881816c83e7c084044e4192e557f920f030644",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCQ6lOM/mnX7R/z\nV30vWrOhBmvX4r5DJIVJQjkqwGggo41BuIXy+7s64UlIJeU3n///m+LIt5fesx2R\nk/6JZTOeAQ/NjN1AjMOXAWRNKv7CIhYfNJf04q71XxGKGb9NJa/ByNOl7oSovo+u\n0JZnQBEUi532IeF0PBxbn0ZnJ/4cugdLvEw2fZoU2YIit7lQPNdMMFUgEVkVt6nO\nuWLSgjDgZ1A9YzW6tIDZ5SqoqcYS/4RpLsJ0SfoevVKJOZHzH/oqa/v18bFnATWl\nReMxhE9LRQF11LDqCtSJ/gZATrwoj06dxv1GfmQkAvEU+nZvd6xxC9PSTZwmV5I1\nhe61vzRZAgMBAAECggEAIWCjaVZg3Q+7+/Gi/wDyXiyLMtCCF5dmDqtO3PqvkRLy\nklhUm9Rgua1RkmlOC/uRfFd0itwEghH5xcHTTuSNGL+wWtzuyfMSCqoSptZ4EpFE\nzJ+xv0Dl4NSqhscq4XNEccsWeoG/MtmfYPmgprviIzwMIDiKA9pjgrPjBJf4xrc2\nggWkCNXvAIEuwLe09bYAdHevk/i0gfgkLc/20CU6I2Qw2NR/ZJAyi8QzgWWythqr\noVYPObsCfZh6XCOC8oC7N8mlEgN5JXxOL3y2tco63xsGMUuZTWsLJEZDUTszxBXP\nYYnK8XfLkkEH9Qq4FJ4C4dz0frllZ3S3Xg+/PzgIbQKBgQDDemgE8XPuzH47pEW6\nlMcTjXXUjZIg/szWQQHvBZqTkR/zheMnIt4qty5dEHLOKw1cWNT9vPdhyX2FxPBO\nvrp9PcJIFApTVFyeWGZ9eihJiShuqzWhNNK9G0UVoKlA2NkUIMKy+EhS2WGwYQd4\nblcBDXTwHk1Kkuaz5FEhe6Y9dQKBgQC9yFAM3rIrSSrfamDsGXAOD+/X7IaugJbz\nUdAm23wqsNzTqG4Y6XZEbjJg37EFJXS4QyH935FgIa0AytoJQgdkiUyeT7umy8hV\np0b1GKuJ7lOv1WGnSJIH/EbeV2GpGOW2JawUa67OWwpupjnWrqfzlWtW+4jAcWWV\nuK/rH3mK1QKBgDr5ZwB2x/83eq4LtW3BDP59IxtpSrjhpnLNUgQGsMfsdLNHpWxd\nPKGuejJhkAFbQ8CknD2hERFTdKcy7z0SlbjLNR4BzcuuG/M5wFIC1Ly6wJQC2z8z\nbJDY9VK9EdMamQNVjufnuAomwy4vV82hnGYY5Tq8KZ1iDHAhZciwQUsxAoGAQvH8\nOu37j4VZ2EGgOuimPG+mvVY0FC5METzU3kAiRrTo0MjjPWptS6pLnxyJRzV1POKB\nhRpuH6kBa/wieY2PKgm8u0OJAEd2PbCqOR8gs6EcaDQvJGFXEfYN0bSlQI8FyQD0\n+KcbnLNEtM9yK6aknCojGSXVkXzuxqfFdn091JkCgYBZqbRi6zYMoQpvpwG3vWYK\nImst+xmRAA52s51beVC2JSiloR++2PR6f+Wc44Gz+2NC2DnV/8CnXcVy2upx1kvh\n3ZWqrMGxfrgvgNdSlvvAnj+BCZxktDtjrdiOOYvKo3l0GMUZ8zG3WhuvQIb8HHxf\ndKh8GpMU7oqSvxwHLE+Oag==\n-----END PRIVATE KEY-----\n",
+  "client_email": "uipath-service@windy-bounty-402403.iam.gserviceaccount.com",
+  "client_id": "102710893259618247690",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/uipath-service%40windy-bounty-402403.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
