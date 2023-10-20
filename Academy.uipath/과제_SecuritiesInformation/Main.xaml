@@ -307,10 +307,10 @@
           <OutArgument x:TypeArguments="ss:SecureString">[password]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="ss:SecureString">[(New System.Net.NetworkCredential("", "wjddn3179")).SecurePassword]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString">[(New System.Net.NetworkCredential("", "여기비밀번호")).SecurePassword]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="&#xD;&#xA;&quot;rpa.sj.jeong@gmail.com&quot;" Body="본 메일은 Send SMTP Mail Message를 이용하여 발송하였습니다." DisplayName="첨부파일 메일 발송 | Send SMTP Mail Message" Email="jungwoo3179@naver.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Port="465" SecureConnection="Auto" SecurePassword="[password]" Server="smtp.naver.com" Subject="[과제2] 증권정보 추출하기_남정우" To="rpa.sj.jeong@gmail.com">
+      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="&#xD;&#xA;&quot;rpa.sj.jeong@gmail.com&quot;" Body="본 메일은 Send SMTP Mail Message를 이용하여 발송하였습니다." DisplayName="첨부파일 메일 발송 | Send SMTP Mail Message" Email="이메일" EnableSSL="True" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Port="465" SecureConnection="Auto" SecurePassword="[password]" Server="smtp.naver.com" Subject="[과제2] 증권정보 추출하기_남정우" To="rpa.sj.jeong@gmail.com">
         <ui:SendMail.Files>
           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
             <InArgument x:TypeArguments="x:String">
