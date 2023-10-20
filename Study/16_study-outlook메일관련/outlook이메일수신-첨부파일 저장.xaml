@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1202,2712" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="700,2864" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -103,107 +103,119 @@
       <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="648,2647" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="mailMessage" />
-    </Sequence.Variables>
+  <Sequence sap:VirtualizedContainerService.HintSize="710,2799" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="586,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;아웃룩에 이메일 연결 - 첨부파일 다운로드 및 답장 시작&quot;]" />
-    <ui:GetOutlookMailMessages Filter="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" Account="jungwoo3179@naver.com" sap2010:Annotation.AnnotationText="account : 내 이메일&#xD;&#xA;mailFolder : 어디에서 메일을 확인해서 가져올건지 &quot;받은 편지함&quot;&#xD;&#xA;&#xD;&#xA;MarkAsRead : 동작하고 그 메일에 대해 읽음으로 표시할거니 ?&#xD;&#xA;&#xD;&#xA;OnlyUnreadMessages : 읽지않은것만 확인해서 가져올거니?&#xD;&#xA;&#xD;&#xA;Top: 위에서 몇개의 메일을 가져올거니? &#xD;&#xA;&#xD;&#xA;output - messages : 가져온 내용들을 어떤 변수명에 저장할거니" DisplayName="Private: Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="586,322" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="받은 편지함" MarkAsRead="True" Messages="[mailMessage]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Top="1">
+    <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="648,2688" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="mailMessage" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ui:GetOutlookMailMessages>
-    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="받은 메일을 포문으로 반복할거야&#xD;&#xA;" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="586,1993" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[mailMessage]">
-      <ui:ForEach.Body>
-        <ActivityAction x:TypeArguments="snm:MailMessage">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentItem" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1765" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;제목 : &quot; + currentItem.Subject.ToString]" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,90" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;본문 : &quot; + currentItem.Body.ToString]" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,90" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;수신자 : &quot; + currentItem.To.ToString]" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,90" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;발신자 : &quot; + currentItem.From.ToString]" />
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,365" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:MoveOutlookMessage Account="{x:Null}" MailFolder="{x:Null}" MailMessage="{x:Null}" sap2010:Annotation.AnnotationText="mail message&#xD;&#xA;커랜트로 받아온 내용&#xD;&#xA;&#xD;&#xA;mail Folder&#xD;&#xA;이동시킬 폴더명을 적어주면 되는거임 " DisplayName="Move Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,175" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_1">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:MoveOutlookMessage>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <If sap2010:Annotation.AnnotationText="첨부파일있는지 확인해서 다운받을거임&#xD;&#xA;" Condition="[currentItem.Attachments.Any]" sap:VirtualizedContainerService.HintSize="510,752" sap2010:WorkflowViewState.IdRef="If_1">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="586,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;아웃룩에 이메일 연결 - 첨부파일 다운로드 및 답장 시작&quot;]" />
+      <ui:GetOutlookMailMessages Filter="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" Account="jungwoo3179@naver.com" sap2010:Annotation.AnnotationText="account : 내 이메일&#xA;mailFolder : 어디에서 메일을 확인해서 가져올건지 &quot;받은 편지함&quot;&#xA;&#xA;MarkAsRead : 동작하고 그 메일에 대해 읽음으로 표시할거니 ?&#xA;&#xA;OnlyUnreadMessages : 읽지않은것만 확인해서 가져올거니?&#xA;&#xA;Top: 위에서 몇개의 메일을 가져올거니? &#xA;&#xA;output - messages : 가져온 내용들을 어떤 변수명에 저장할거니" DisplayName="Private: Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="586,340" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="받은 편지함" MarkAsRead="True" Messages="[mailMessage]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Top="1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:GetOutlookMailMessages>
+      <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="받은 메일을 포문으로 반복할거야&#xA;" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="586,2014" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[mailMessage]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="snm:MailMessage">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentItem" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1782" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,528" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="strSubject" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:SaveMailAttachments Attachments="{x:Null}" sap2010:Annotation.AnnotationText="저장할 폴더경로?&quot;" DisplayName="Save Attachments" ExcludeInlineAttachments="False" FolderPath="첨부파일 포함" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[currentItem]" OverwriteExisting="False">
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;제목 : &quot; + currentItem.Subject.ToString]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;본문 : &quot; + currentItem.Body.ToString]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;수신자 : &quot; + currentItem.To.ToString]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;발신자 : &quot; + currentItem.From.ToString]" />
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,370" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,291" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </ui:SaveMailAttachments>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[strSubject]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">["Re) " +currentItem.Subject]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <ui:ReplyToOutlookMailMessage AddBcc="{x:Null}" AddCc="{x:Null}" AddTo="{x:Null}" ReplyFrom="{x:Null}" TimeoutMS="{x:Null}" Body="이건 답장인데 첨부파일 확인 완료임" DisplayName="Reply To Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,118" sap2010:WorkflowViewState.IdRef="ReplyToOutlookMailMessage_1" Importance="Normal" MailMessage="[currentItem]" NewSubject="[strSubject]" ReplyAll="False">
-                    <ui:ReplyToOutlookMailMessage.Files>
-                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                    </ui:ReplyToOutlookMailMessage.Files>
-                  </ui:ReplyToOutlookMailMessage>
-                </Sequence>
-              </If.Then>
-              <If.Else>
-                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4" />
-              </If.Else>
-            </If>
-          </Sequence>
-        </ActivityAction>
-      </ui:ForEach.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:ForEach>
+                    <ui:MoveOutlookMessage Account="{x:Null}" MailFolder="{x:Null}" MailMessage="{x:Null}" sap2010:Annotation.AnnotationText="mail message&#xA;커랜트로 받아온 내용&#xA;&#xA;mail Folder&#xA;이동시킬 폴더명을 적어주면 되는거임 " DisplayName="Move Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,180" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:MoveOutlookMessage>
+                  </Sequence>
+                </ui:CommentOut.Body>
+              </ui:CommentOut>
+              <If sap2010:Annotation.AnnotationText="첨부파일있는지 확인해서 다운받을거임&#xA;" Condition="[currentItem.Attachments.Any]" sap:VirtualizedContainerService.HintSize="510,760" sap2010:WorkflowViewState.IdRef="If_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="476,533" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="strSubject" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:SaveMailAttachments Attachments="{x:Null}" sap2010:Annotation.AnnotationText="저장할 폴더경로?&quot;" DisplayName="Save Attachments" ExcludeInlineAttachments="False" FolderPath="첨부파일 포함" sap:VirtualizedContainerService.HintSize="434,119" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[currentItem]" OverwriteExisting="False">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:SaveMailAttachments>
+                    <Assign sap2010:Annotation.AnnotationText="&quot;Re) &quot; +currentItem.Subject&#xD;&#xA;" DisplayName="Assign - 답장해줄 제목 설정중" sap:VirtualizedContainerService.HintSize="434,127" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[strSubject]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">["Re) " +currentItem.Subject]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <ui:ReplyToOutlookMailMessage AddBcc="{x:Null}" AddCc="{x:Null}" AddTo="{x:Null}" ReplyFrom="{x:Null}" TimeoutMS="{x:Null}" Body="이건 답장인데 첨부파일 확인 완료임" DisplayName="Reply To Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,119" sap2010:WorkflowViewState.IdRef="ReplyToOutlookMailMessage_1" Importance="Normal" MailMessage="[currentItem]" NewSubject="[strSubject]" ReplyAll="False">
+                      <ui:ReplyToOutlookMailMessage.Files>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                      </ui:ReplyToOutlookMailMessage.Files>
+                    </ui:ReplyToOutlookMailMessage>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4" />
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEach>
+    </Sequence>
   </Sequence>
 </Activity>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Html활용" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1158,1171" sap2010:WorkflowViewState.IdRef="Html활용_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Html활용" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="643,1196" sap2010:WorkflowViewState.IdRef="Html활용_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -88,7 +88,7 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Html활용" sap:VirtualizedContainerService.HintSize="496,1106" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Html활용" sap:VirtualizedContainerService.HintSize="496,1131" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strEmailBody" />
       <Variable x:TypeArguments="x:String" Name="strHtml" />
@@ -99,14 +99,14 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;html 이메일 발송 시작&quot;]" />
-    <ui:ReadTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="이게  html에서 저장한게 텍스트 파일로 저장된거야" Content="[strEmailBody]" DisplayName="Read Text File" FileName="Data\text-to-html-converter.txt" sap:VirtualizedContainerService.HintSize="434,111" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+    <ui:ReadTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="이게  html에서 저장한게 텍스트 파일로 저장된거야&#xD;&#xA;&#xD;&#xA;읽어온 내용을 strEmailBody에 저장" Content="[strEmailBody]" DisplayName="Read Text File" FileName="Data\text-to-html-converter.txt" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadTextFile>
-    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="to : 받는사람 이메일&#xD;&#xA;isBodyHtml : 체크해줬음" Body="[strEmailBody]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="제목이랴 " To="jungwoo3179@naver.com">
+    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="to : 받는사람 이메일&#xA;isBodyHtml : 체크해줬음" Body="[strEmailBody]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="제목이랴" To="jungwoo3179@naver.com">
       <ui:SendOutlookMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
       </ui:SendOutlookMail.Files>
@@ -116,7 +116,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:SendOutlookMail>
-    <umab:CreateHtmlContent sap2010:Annotation.AnnotationText="여기서  html변수 생성할 수 있어&#xD;&#xA;" DisplayName="Create HTML Content" sap:VirtualizedContainerService.HintSize="434,195" HtmlContent="[strHtml]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_1">
+    <umab:CreateHtmlContent sap2010:Annotation.AnnotationText="여기서  html변수 생성할 수 있어&#xA;" DisplayName="Create HTML Content" sap:VirtualizedContainerService.HintSize="434,194" HtmlContent="[strHtml]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_1">
       <umab:CreateHtmlContent.HtmlContentArg>
         <umabh:HtmlContentArgument FilePath=".data/HtmlContent0.html">
           <umabh:HtmlContentArgument.RuntimeImages>
@@ -133,7 +133,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </umab:CreateHtmlContent>
-    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="to : 받는사람 이메일&#xD;&#xA;isBodyHtml : 체크해줬음" Body="[strHtml]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="제목 : html" To="jungwoo3179@naver.com">
+    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="to : 받는사람 이메일&#xA;isBodyHtml : 체크해줬음" Body="[strHtml]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="제목 : html" To="jungwoo3179@naver.com">
       <ui:SendOutlookMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
       </ui:SendOutlookMail.Files>

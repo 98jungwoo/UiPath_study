@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="이메일_발송" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1202,827" sap2010:WorkflowViewState.IdRef="이메일_발송_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="이메일_발송" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="643,825" sap2010:WorkflowViewState.IdRef="이메일_발송_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -84,7 +84,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="이메일_발송" sap:VirtualizedContainerService.HintSize="450,595" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="이메일_발송" sap:VirtualizedContainerService.HintSize="450,652" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strEmailBody" />
     </Sequence.Variables>
@@ -94,8 +94,14 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;이메일 발송 시작&quot;]" />
-    <ui:ReadTextFile File="{x:Null}" Content="[strEmailBody]" DisplayName="Read Text File" FileName="Data\메일발송내용.txt" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" Subject="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="to : 받는사람 이메일" Body="[String.Format(strEmailBody, Now)]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,183" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" To="jungwoo3179@naver.com">
+    <ui:ReadTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="읽어온 파일의 정보를 변수에 저장&#xD;&#xA;&#xD;&#xA;변수명 : strEmailBody" Content="[strEmailBody]" DisplayName="Read Text File | 읽어올 파일지정" FileName="Data\메일발송내용.txt" sap:VirtualizedContainerService.HintSize="388,137" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadTextFile>
+    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" Subject="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="to : 받는사람 이메일" Body="[String.Format(strEmailBody, Now)]" DisplayName="Send Outlook Mail Message | 메일 발송" sap:VirtualizedContainerService.HintSize="388,183" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" To="jungwoo3179@naver.com">
       <ui:SendOutlookMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
       </ui:SendOutlookMail.Files>
