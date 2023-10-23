@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1202,3158" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1202,3147" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -116,7 +116,7 @@
       <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="증권정보 추출 및 메일발송 | Sequence" sap:VirtualizedContainerService.HintSize="608,3093" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="증권정보 추출 및 메일발송 | Sequence" sap:VirtualizedContainerService.HintSize="608,3082" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="browser" />
       <Variable x:TypeArguments="ui:Image" Name="img_TopKOSPI" />
@@ -295,7 +295,7 @@
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
     </Sequence>
-    <Sequence DisplayName="첨부파일 메일발송 | Sequence" sap:VirtualizedContainerService.HintSize="546,551" sap2010:WorkflowViewState.IdRef="Sequence_17">
+    <Sequence DisplayName="첨부파일 메일발송 | Sequence" sap:VirtualizedContainerService.HintSize="546,540" sap2010:WorkflowViewState.IdRef="Sequence_17">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="password" />
       </Sequence.Variables>
@@ -307,7 +307,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage DisplayName="첨부파일 메일 발송 | Log Message" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;이메일 발송 시작&quot;]" />
       <ui:GetPassword DisplayName="비밀번호 암호화 | Get Password" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnqt6EwnMnE6dSVEh177CegAAAAACAAAAAAAQZgAAAAEAACAAAADGuYyRvZBqM/VD8x1Lr5LnkXP78yWCHZO2ionbarJHGQAAAAAOgAAAAAIAACAAAADiW5nukXRZsAQy30PULd6CbF4ocgkbcRK/XRpptVMwZRAAAACBmEhnJ1NG7cgC3FGT9Ir3QAAAAFZT8qpYyhWURwn8TaAmQ5gPwxAP1MgjQnrSSpKTil5daNNYnqHd5txCJA3OjVy5QWF19i723mbXjjnaNHeu+Ao=" Result="[password]" />
-      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="&#xA;&quot;rpa.sj.jeong@gmail.com&quot;" Body="본 메일은 Send SMTP Mail Message를 이용하여 발송하였습니다." DisplayName="첨부파일 메일 발송 | Send SMTP Mail Message" Email="jungwoo3179@naver.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="388,194" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="[password]" Port="465" SecureConnection="Auto" Server="smtp.naver.com" Subject="[과제2] 증권정보 추출하기_남정우" To="rpa.sj.jeong@gmail.com">
+      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="" Body="본 메일은 Send SMTP Mail Message를 이용하여 발송하였습니다." DisplayName="첨부파일 메일 발송 | Send SMTP Mail Message" Email="jungwoo3179@naver.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="388,183" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="[password]" Port="465" SecureConnection="Auto" Server="smtp.naver.com" Subject="[과제2] 증권정보 추출하기_남정우" To="rpa.sj.jeong@gmail.com">
         <ui:SendMail.Files>
           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
             <InArgument x:TypeArguments="x:String">[excelName]</InArgument>
