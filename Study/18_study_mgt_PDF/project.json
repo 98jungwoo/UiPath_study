@@ -1,21 +1,22 @@
 {
-  "name": "과제_20231024_제목하이퍼링크",
-  "projectId": "ab9d210c-a8a8-43a2-936d-1f4567a66f72",
+  "name": "18_study_mgt_PDF",
+  "projectId": "89f9feab-de9e-43af-9f9d-103b359a57be",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Credentials.Activities": "[2.0.0]",
     "UiPath.Excel.Activities": "[2.22.1-preview]",
     "UiPath.Mail.Activities": "[1.20.3]",
+    "UiPath.PDF.Activities": "[3.16.0]",
     "UiPath.System.Activities": "[23.10.0-preview]",
     "UiPath.Testing.Activities": "[23.10.0-preview]",
-    "UiPath.UIAutomation.Activities": "[23.10.0-preview]"
+    "UiPath.UIAutomation.Activities": "[23.10.0-preview]",
+    "UiPath.Word.Activities": "[1.18.1]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.0.0",
-  "projectVersion": "1.0.1",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -52,7 +53,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "c27d4496-9c20-4079-a57e-5f775c81cd80",
+      "uniqueId": "ecd5e19e-75dc-413c-a105-c258de011913",
       "input": [],
       "output": []
     }

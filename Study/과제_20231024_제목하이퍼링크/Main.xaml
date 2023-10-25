@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1202,4921" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1202,4963" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -108,7 +108,7 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="679,4856" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="679,4898" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="browser" />
       <Variable x:TypeArguments="x:String" Name="subject" />
@@ -129,7 +129,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign sap2010:Annotation.AnnotationText="today : 오늘 날짜 &#xA;fileName : 엑셀에 저장할 파일명 지정 근데 이거 다시 해줘야함-&gt; [파일명_오늘날짜(20231024).xlsx&#xA;mailSubject : 메일 초기 제목&#xA;userName : 본인이름&#xA;userMail : 보낼 메일주소&#xD;&#xA;mailBody : 메일본문&#xD;&#xA;&#xA;이런식으로 사용해서 처음에 변수 생성하면 가독성에 좋음&#xA;&quot;radomir2843@daum.net&quot;&#xA;" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="617,448" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="today : 오늘 날짜 &#xA;fileName : 엑셀에 저장할 파일명 지정 근데 이거 다시 해줘야함-&gt; [파일명_오늘날짜(20231024).xlsx&#xA;mailSubject : 메일 초기 제목&#xA;userName : 본인이름&#xA;userMail : 보낼 메일주소&#xA;mailBody : 메일본문&#xA;&#xA;이런식으로 사용해서 처음에 변수 생성하면 가독성에 좋음&#xA;&quot;radomir2843@daum.net&quot;&#xA;" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="617,448" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -340,7 +340,7 @@
       </ui:ExcelApplicationScope>
       <ui:LogMessage DisplayName="스크레핑 및 엑셀저장 종료 | Log Message" sap:VirtualizedContainerService.HintSize="555,141" sap2010:WorkflowViewState.IdRef="LogMessage_12" Message="[&quot;스크레핑 및 엑셀저장종료&quot;]" />
     </Sequence>
-    <Sequence DisplayName="메일 발송 | Sequence" sap:VirtualizedContainerService.HintSize="617,968" sap2010:WorkflowViewState.IdRef="Sequence_15">
+    <Sequence DisplayName="메일 발송 | Sequence" sap:VirtualizedContainerService.HintSize="617,1010" sap2010:WorkflowViewState.IdRef="Sequence_15">
       <Sequence.Variables>
         <Variable x:TypeArguments="ss:SecureString" Name="password" />
         <Variable x:TypeArguments="x:String" Name="formatMailBody" />
@@ -368,7 +368,7 @@
                 <OutArgument x:TypeArguments="x:String">[replaceMailBody]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[mailBody.Replace("본인이름", "0").Replace("날짜", "1").Replace("본인이름", "2")]</InArgument>
+                <InArgument x:TypeArguments="x:String">[mailBody.Replace("본인이름", "0").Replace("날짜", "1")]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
           </scg:List>
@@ -382,20 +382,23 @@
                 <OutArgument x:TypeArguments="x:String">[formatMailBody]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[String.Format(replaceMailBody,userName, today, userName)]</InArgument>
+                <InArgument x:TypeArguments="x:String">[String.Format(replaceMailBody,userName, today)]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[formatMailBody]" DisplayName="outlook 메일 발송 | Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="479,152" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[replaceMailSubject]" To="[userMail]">
+      <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Cc 는 참조임&#xD;&#xA;" Body="[formatMailBody]" DisplayName="outlook 메일 발송 | Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="479,194" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[replaceMailSubject]" To="[userMail]">
         <ui:SendOutlookMail.Files>
           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-            <InArgument x:TypeArguments="x:String">
-              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="fileName" />
-            </InArgument>
+            <InArgument x:TypeArguments="x:String">[fileName]</InArgument>
           </scg:List>
         </ui:SendOutlookMail.Files>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:SendOutlookMail>
       <ui:LogMessage DisplayName="메일발송 종료 | Log Message" sap:VirtualizedContainerService.HintSize="479,141" sap2010:WorkflowViewState.IdRef="LogMessage_14" Message="[&quot;메일발송 작업 종료&quot;]" />
     </Sequence>
