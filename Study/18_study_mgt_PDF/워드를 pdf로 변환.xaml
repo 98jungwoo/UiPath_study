@@ -64,25 +64,31 @@
       <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="워드를_pdf로_변환" sap:VirtualizedContainerService.HintSize="592,443" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="워드를_pdf로_변환" sap:VirtualizedContainerService.HintSize="592,485" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="data\input\Word_샘플양식.docx" sap:VirtualizedContainerService.HintSize="530,332" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="data\input\Word_샘플양식.docx" sap:VirtualizedContainerService.HintSize="530,374" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
       <p:WordApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WordDocument">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,222" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,264" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="data\output\워드를 pdf로 저장하려고 생성함.pdf" sap:VirtualizedContainerService.HintSize="434,111" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
+            <p:WordExportToPdf sap2010:Annotation.AnnotationText="워드 파일 생성하는거&#xD;&#xA;" DisplayName="Save Document as PDF" FilePath="data\output\워드를 pdf로 저장하려고 생성함.pdf" sap:VirtualizedContainerService.HintSize="434,153" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p:WordExportToPdf>
           </Sequence>
         </ActivityAction>
       </p:WordApplicationScope.Body>

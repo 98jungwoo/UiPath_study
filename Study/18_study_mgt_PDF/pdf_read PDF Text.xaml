@@ -73,6 +73,7 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="pdf" sap:VirtualizedContainerService.HintSize="746,2425" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -137,7 +138,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="608,90" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[arrPDFItem.ToString]" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="608,90" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;★&quot;+arrPDFItem.ToString]" />
             <If Condition="[arrPDFItem.Contains(&quot;Client Name&quot;)]" sap:VirtualizedContainerService.HintSize="608,953" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="574,771" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -149,7 +150,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap2010:Annotation.AnnotationText="클라이언트 이름 찾기 방법 1&#xD;&#xA;&#xD;&#xA;스플릿 ) 구분자가 2개인것 &#xD;&#xA;&#xD;&#xA;pdf.Trim.Split({&quot;Name &quot;}, StringSplitOptions.RemoveEmptyEntries).Last.Trim" sap:VirtualizedContainerService.HintSize="532,184" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <Assign sap2010:Annotation.AnnotationText="클라이언트 이름 찾기 방법 1&#xA;&#xA;스플릿 ) 구분자가 2개인것 &#xA;&#xA;pdf.Trim.Split({&quot;Name &quot;}, StringSplitOptions.RemoveEmptyEntries).Last.Trim" sap:VirtualizedContainerService.HintSize="532,184" sap2010:WorkflowViewState.IdRef="Assign_5">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[strName]</OutArgument>
                     </Assign.To>
@@ -170,7 +171,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap2010:Annotation.AnnotationText="클라이언트 이름 찾기 방법 2&#xD;&#xA;&#xD;&#xA;리플레이스 ) " sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign sap2010:Annotation.AnnotationText="클라이언트 이름 찾기 방법 2&#xA;&#xA;리플레이스 ) " sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="Assign_4">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[strName]</OutArgument>
                           </Assign.To>
