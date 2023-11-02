@@ -1,3 +1,12 @@
+## 평가2차_REFramework
+
+RERramework를 사용한 프로그램 
+
+프로필 내용을 추출하여 엑셀에 저장 후 Outlook으로 이메일 발송하기 프로세스
+
+![2차_종합평가_리뷰](https://github.com/98jungwoo/UiPath_study/assets/126783518/69a36727-504f-451b-bbe0-b5d7e2666650)
+
+
 ### Documentation is included in the Documentation folder ###
 
 
@@ -37,3 +46,5 @@
 2. Implement InitiAllApplications.xaml and CloseAllApplicatoins.xaml workflows, linking them in the Config.xlsx fields
 3. Implement GetTransactionData.xaml and SetTransactionStatus.xaml according to the transaction type being used (Orchestrator queues by default)
 4. Implement Process.xaml workflow and invoke other workflows related to the process being automated
+
+
